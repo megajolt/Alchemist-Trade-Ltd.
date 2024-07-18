@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://epfff3hv30c5"]
+[gd_scene load_steps=7 format=3 uid="uid://epfff3hv30c5"]
 
 [ext_resource type="BoxMesh" uid="uid://btkygyfsc0ftr" path="res://3DAssets/StationMonitor.tres" id="1_asoov"]
 [ext_resource type="Material" uid="uid://llbyixehepnt" path="res://Materials/ComputerBodyMat.tres" id="2_kvgqo"]
 [ext_resource type="PlaneMesh" uid="uid://cd2kbnl1spwo8" path="res://3DAssets/Desk.tres" id="2_srt65"]
 [ext_resource type="PlaneMesh" uid="uid://ds83btb76ktu8" path="res://3DAssets/Screen.tres" id="3_p5fwf"]
 [ext_resource type="Material" uid="uid://clg4cyrvmdafk" path="res://Materials/ScreenMat.tres" id="4_4mhtl"]
+[ext_resource type="Script" path="res://Scripts/RotationScript.gd" id="5_5g6tk"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -15,13 +16,13 @@ skeleton = NodePath("../Ingredient Market")
 surface_material_override/0 = ExtResource("2_kvgqo")
 
 [node name="Screen" type="MeshInstance3D" parent="Ingredient Stocks"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.190638, 0.004559, 0.000715941)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.191, 0, 0)
 mesh = ExtResource("3_p5fwf")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_4mhtl")
 
 [node name="Ingredient Market" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, 0.19, -0.485)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19, -0.485)
 mesh = ExtResource("1_asoov")
 surface_material_override/0 = ExtResource("2_kvgqo")
 
@@ -35,7 +36,6 @@ surface_material_override/0 = ExtResource("4_4mhtl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485, 0.19, 0)
 mesh = ExtResource("1_asoov")
 skeleton = NodePath("../Ingredient Market")
-surface_material_override/0 = ExtResource("2_kvgqo")
 
 [node name="Screen" type="MeshInstance3D" parent="Recipe Lookup"]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.191, 0, 0)
@@ -56,8 +56,9 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_4mhtl")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191, 0)
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0.191, 0)
 fov = 60.0
+script = ExtResource("5_5g6tk")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.25583, 0)
