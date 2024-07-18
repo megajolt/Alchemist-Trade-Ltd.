@@ -1,3 +1,98 @@
-[gd_scene format=3 uid="uid://epfff3hv30c5"]
+[gd_scene load_steps=6 format=3 uid="uid://epfff3hv30c5"]
+
+[ext_resource type="BoxMesh" uid="uid://btkygyfsc0ftr" path="res://3DAssets/StationMonitor.tres" id="1_asoov"]
+[ext_resource type="Material" uid="uid://llbyixehepnt" path="res://Materials/ComputerBodyMat.tres" id="2_kvgqo"]
+[ext_resource type="PlaneMesh" uid="uid://cd2kbnl1spwo8" path="res://3DAssets/Desk.tres" id="2_srt65"]
+[ext_resource type="PlaneMesh" uid="uid://ds83btb76ktu8" path="res://3DAssets/Screen.tres" id="3_p5fwf"]
+[ext_resource type="Material" uid="uid://clg4cyrvmdafk" path="res://Materials/ScreenMat.tres" id="4_4mhtl"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Ingredient Stocks" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485, 0.19, 0)
+mesh = ExtResource("1_asoov")
+skeleton = NodePath("../Ingredient Market")
+surface_material_override/0 = ExtResource("2_kvgqo")
+
+[node name="Screen" type="MeshInstance3D" parent="Ingredient Stocks"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.190638, 0.004559, 0.000715941)
+mesh = ExtResource("3_p5fwf")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4mhtl")
+
+[node name="Ingredient Market" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, 0.19, -0.485)
+mesh = ExtResource("1_asoov")
+surface_material_override/0 = ExtResource("2_kvgqo")
+
+[node name="Screen" type="MeshInstance3D" parent="Ingredient Market"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.190565)
+mesh = ExtResource("3_p5fwf")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4mhtl")
+
+[node name="Recipe Lookup" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485, 0.19, 0)
+mesh = ExtResource("1_asoov")
+skeleton = NodePath("../Ingredient Market")
+surface_material_override/0 = ExtResource("2_kvgqo")
+
+[node name="Screen" type="MeshInstance3D" parent="Recipe Lookup"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.191, 0, 0)
+mesh = ExtResource("3_p5fwf")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4mhtl")
+
+[node name="Synthesizer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19, 0.485)
+mesh = ExtResource("1_asoov")
+skeleton = NodePath("../Ingredient Market")
+surface_material_override/0 = ExtResource("2_kvgqo")
+
+[node name="Screen" type="MeshInstance3D" parent="Synthesizer"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.190612)
+mesh = ExtResource("3_p5fwf")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4mhtl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191, 0)
+fov = 60.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.25583, 0)
+light_color = Color(0.776471, 0.803922, 0.843137, 1)
+spot_range = 1.8
+spot_attenuation = 3.60501
+spot_angle = 28.16
+spot_angle_attenuation = 1.18921
+
+[node name="Room" type="Node" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Room"]
+mesh = ExtResource("2_srt65")
+skeleton = NodePath("../..")
+
+[node name="Wall1" type="MeshInstance3D" parent="Room/Floor"]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 1, -1)
+mesh = ExtResource("2_srt65")
+
+[node name="Wall2" type="MeshInstance3D" parent="Room/Floor"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 3.55271e-15, 1, 1, -5.96046e-08)
+mesh = ExtResource("2_srt65")
+skeleton = NodePath("../../..")
+
+[node name="Wall3" type="MeshInstance3D" parent="Room/Floor"]
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -1, 1, 0)
+mesh = ExtResource("2_srt65")
+skeleton = NodePath("../../..")
+
+[node name="Wall4" type="MeshInstance3D" parent="Room/Floor"]
+transform = Transform3D(1, 8.74228e-08, -8.74228e-08, 8.74228e-08, -4.37114e-08, 1, 8.74228e-08, -1, -4.37114e-08, 4.37114e-08, 1, 1)
+mesh = ExtResource("2_srt65")
+skeleton = NodePath("../Cieling")
+
+[node name="Cieling" type="MeshInstance3D" parent="Room/Floor"]
+transform = Transform3D(4.37114e-08, 8.74228e-08, -1, -8.74228e-08, -1, -8.74228e-08, -1, 8.74228e-08, -4.37114e-08, 0, 2, -1.03316e-07)
+mesh = ExtResource("2_srt65")
+skeleton = NodePath("../Wall2")
