@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://8fxancoecrt1"]
 
-[ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="1_t8ps4"]
+[ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="1_qt1ww"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,7 +15,7 @@ offset_right = 219.0
 offset_bottom = 83.0
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_t8ps4")
+theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 64
 text = "$: 5000"
 
@@ -29,7 +29,7 @@ offset_bottom = 83.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_t8ps4")
+theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 64
 text = "Contracts: 0/7"
 
@@ -43,6 +43,6 @@ offset_right = 547.0
 offset_bottom = 45.5
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_fonts/font = ExtResource("1_t8ps4")
+theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 64
 text = "Available Contracts"
