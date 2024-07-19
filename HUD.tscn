@@ -21,13 +21,12 @@ text = "$: 5000"
 
 [node name="Fulfilled Contracts" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -41.5
-offset_right = 411.0
-offset_bottom = 41.5
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -411.0
+offset_bottom = 83.0
+grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_t8ps4")
@@ -36,12 +35,13 @@ text = "Contracts: 0/7"
 
 [node name="Available Contracts" type="MenuButton" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -91.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -45.5
 offset_right = 547.0
-grow_vertical = 0
+offset_bottom = 45.5
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_fonts/font = ExtResource("1_t8ps4")
 theme_override_font_sizes/font_size = 64
