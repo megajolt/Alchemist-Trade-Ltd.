@@ -36,6 +36,7 @@ surface_material_override/0 = ExtResource("4_4mhtl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485, 0.19, 0)
 mesh = ExtResource("1_asoov")
 skeleton = NodePath("../Ingredient Market")
+surface_material_override/0 = ExtResource("2_kvgqo")
 
 [node name="Screen" type="MeshInstance3D" parent="Recipe Lookup"]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.191, 0, 0)
