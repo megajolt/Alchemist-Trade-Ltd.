@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://epfff3hv30c5"]
+[gd_scene load_steps=7 format=3 uid="uid://epfff3hv30c5"]
 
 [ext_resource type="BoxMesh" uid="uid://btkygyfsc0ftr" path="res://3DAssets/StationMonitor.tres" id="1_asoov"]
 [ext_resource type="Material" uid="uid://llbyixehepnt" path="res://Materials/ComputerBodyMat.tres" id="2_kvgqo"]
@@ -6,7 +6,6 @@
 [ext_resource type="PlaneMesh" uid="uid://ds83btb76ktu8" path="res://3DAssets/Screen.tres" id="3_p5fwf"]
 [ext_resource type="Material" uid="uid://clg4cyrvmdafk" path="res://Materials/ScreenMat.tres" id="4_4mhtl"]
 [ext_resource type="Script" path="res://Scripts/RotationScript.gd" id="5_5g6tk"]
-[ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="6_pqgos"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -61,50 +60,6 @@ surface_material_override/0 = ExtResource("4_4mhtl")
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0.191, 0)
 fov = 60.0
 script = ExtResource("5_5g6tk")
-
-[node name="Control" type="Control" parent="Camera3D"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 816.0
-offset_bottom = 334.0
-
-[node name="Label" type="Label" parent="Camera3D/Control"]
-layout_mode = 1
-offset_right = 219.0
-offset_bottom = 83.0
-theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_pqgos")
-theme_override_font_sizes/font_size = 64
-text = "$: 5000"
-
-[node name="Label2" type="Label" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -41.5
-offset_right = 411.0
-offset_bottom = 41.5
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_pqgos")
-theme_override_font_sizes/font_size = 64
-text = "Contracts: 0/7"
-
-[node name="MenuButton" type="MenuButton" parent="Camera3D/Control"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -91.0
-offset_right = 547.0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_fonts/font = ExtResource("6_pqgos")
-theme_override_font_sizes/font_size = 64
-text = "Available Contracts"
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.25583, 0)
