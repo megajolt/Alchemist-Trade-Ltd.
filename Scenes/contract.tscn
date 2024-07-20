@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=3 uid="uid://h46e3custr11"]
+
+[ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_cvexc"]
+[ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="1_e2mjm"]
+[ext_resource type="Texture2D" uid="uid://dawaqyer6v36a" path="res://2DAssets/Frame.png" id="2_x4c00"]
+[ext_resource type="Texture2D" uid="uid://fa34n0o2jp17" path="res://2DAssets/DefaultPortrait.png" id="3_0qo5q"]
+
+[node name="Contract" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -710.0
+offset_bottom = -255.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.352941)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e2mjm")
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x4c00")
+
+[node name="PortraitBorder" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 139.0
+offset_bottom = 140.0
+texture = ExtResource("2_x4c00")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 134.0
+offset_bottom = 134.0
+texture = ExtResource("3_0qo5q")
+
+[node name="Name Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 145.0
+offset_top = 17.0
+offset_right = 215.0
+offset_bottom = 51.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Name:"
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 1
+offset_left = 145.0
+offset_top = 48.0
+offset_right = 427.0
+offset_bottom = 86.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "BingBong ShabaFurg"
+autowrap_mode = 3
+
+[node name="Description Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 140.0
+offset_right = 154.0
+offset_bottom = 174.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Description:"
+autowrap_mode = 3
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 173.0
+offset_right = 426.0
+offset_bottom = 270.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+autowrap_mode = 3
+
+[node name="Requirements Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 263.0
+offset_right = 187.0
+offset_bottom = 297.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Requirements:"
+autowrap_mode = 3
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 297.0
+offset_right = 425.0
+offset_bottom = 377.0
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+item_count = 2
+max_columns = 2
+same_column_width = true
+icon_scale = 0.5
+fixed_icon_size = Vector2i(60, 60)
+item_0/text = "Item: 1"
+item_0/icon = ExtResource("1_e2mjm")
+item_0/selectable = false
+item_1/text = "Item2: 3"
+item_1/icon = ExtResource("1_e2mjm")
+item_1/selectable = false

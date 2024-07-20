@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8fxancoecrt1"]
+[gd_scene load_steps=4 format=3 uid="uid://8fxancoecrt1"]
 
-[ext_resource type="Script" path="res://Scenes/HUD.gd" id="1_j5grr"]
+[ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_j5grr"]
 [ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="1_qt1ww"]
+[ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="3_aotyo"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -16,6 +17,7 @@ script = ExtResource("1_j5grr")
 layout_mode = 0
 offset_right = 114.0
 offset_bottom = 42.0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -28,6 +30,7 @@ offset_left = 10.0
 offset_top = 33.0
 offset_right = 99.0
 offset_bottom = 75.0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -40,21 +43,25 @@ offset_left = 13.0
 offset_top = 33.0
 offset_right = 95.0
 offset_bottom = 75.0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 32
 text = "- 500"
 
-[node name="Available Contracts" type="MenuButton" parent="."]
+[node name="Available Contracts" type="Tree" parent="."]
 layout_mode = 1
-offset_top = 79.0
-offset_right = 279.0
-offset_bottom = 129.0
-theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_fonts/font = ExtResource("1_qt1ww")
+offset_left = 2.0
+offset_top = 74.0
+offset_right = 42.0
+offset_bottom = 114.0
+theme = ExtResource("3_aotyo")
 theme_override_font_sizes/font_size = 32
-text = "Available Contracts"
+theme_override_font_sizes/title_button_font_size = 32
+column_titles_visible = true
+allow_search = false
+scroll_vertical_enabled = false
 
 [node name="Fulfilled Contracts" type="Label" parent="."]
 layout_mode = 1
@@ -64,6 +71,7 @@ anchor_right = 1.0
 offset_left = -208.0
 offset_bottom = 43.0
 grow_horizontal = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -79,6 +87,7 @@ anchor_bottom = 1.0
 offset_top = -43.0
 offset_right = 208.0
 grow_vertical = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -95,6 +104,7 @@ offset_left = -79.0
 offset_top = 44.0
 offset_bottom = 86.0
 grow_horizontal = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -111,6 +121,7 @@ offset_left = -159.0
 offset_top = 91.0
 offset_bottom = 133.0
 grow_horizontal = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
@@ -130,6 +141,7 @@ offset_top = -42.0
 offset_right = -56.5
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 24
@@ -148,6 +160,7 @@ offset_top = -42.0
 offset_right = 17.5
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 24
@@ -166,14 +179,7 @@ offset_top = -42.0
 offset_right = 113.5
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_disabled_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0.811765, 0, 1)
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme = ExtResource("3_aotyo")
 theme_override_font_sizes/font_size = 24
 toggle_mode = true
 text = "▶▶"
@@ -189,6 +195,7 @@ offset_left = -132.0
 offset_top = -50.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 32
@@ -204,6 +211,7 @@ offset_top = 80.0
 offset_right = 53.0
 offset_bottom = 217.0
 grow_vertical = 2
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0.589096, 0.589096, 0.589096, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 100
@@ -221,6 +229,7 @@ offset_top = 80.0
 offset_bottom = 217.0
 grow_horizontal = 0
 grow_vertical = 2
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0.589096, 0.589096, 0.589096, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 100
@@ -241,6 +250,7 @@ offset_right = 96.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 64

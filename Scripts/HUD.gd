@@ -20,8 +20,6 @@ var fast = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Money.text = "$: "+str(money)
-	$Add.hide()
-	$Subtract.hide()
 	$Day.text = "Day: "+str(day)
 	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)
 	$Date.text = str(calMonth)+"/"+str(calDay)+"/"+str(calYear)
@@ -30,9 +28,9 @@ func _ready():
 
 func _contract_check():
 	if(day%7==0&&fulfilledContracts!=contractsRequired||money<-10000):
-		$GameOver.visible=true
+		$GameOver.show()
 	else:
-		$GameOver.visible=false	
+		$GameOver.hide()
 
 
 func _update_time():
@@ -61,9 +59,9 @@ func _input(event):
 
 
 func _update_date():
-	if($" Day".button_pressed||hour==24):
-		$" Day".button_pressed=false
-		$" Day".disabled = true
+	if($"Pass Day".button_pressed||hour==24):
+		$"Pass Day".button_pressed=false
+		$"Pass Day".disabled = true
 		day=day+1
 		calDay=calDay+1
 		hour=8
@@ -78,7 +76,7 @@ func _update_date():
 	$Day.text = "Day: "+str(day)
 	$Date.text = str(calMonth)+"/"+str(calDay)+"/"+str(calYear)
 	$Time.text = str(hour)+":"+str(minute)+":"+str(second)
-	$" Day".disabled=false
+	$"Pass Day".disabled=false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -89,19 +87,19 @@ func _process(delta):
 	if(moneyChange==true&&changeAmount!=0):
 		if(changeAmount<0):
 			$Subtract.text="- "+str(abs(changeAmount))
-			$Subtract.visible=true
+			$Subtract.show()
 			money-=1
 			changeAmount+=1
 			$Money.text="$: "+str(money)
 		if(changeAmount>0):
 			$Add.text="+ "+str(changeAmount)
-			$Add.visible=true
+			$Add.show()
 			money+=1
 			changeAmount-=1
 			$Money.text="$: "+str(money)
 	if(changeAmount==0):
-		$Add.visible=false
-		$Subtract.visible=false
+		$Add.hide()
+		$Subtract.hide()
 		moneyChange=false
 	if(money<0):
 		$Money.add_theme_color_override("font_color","#cf0000")

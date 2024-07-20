@@ -1,0 +1,139 @@
+[gd_resource type="Theme" load_steps=34 format=3 uid="uid://cxjmtitrmarst"]
+
+[ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="1_fh624"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evqgc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35cvj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fy5qc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2j1mg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p7ql1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6wf0v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ocg2m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxmo1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snug7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nyng2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64g77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm7o0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sno4s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ixis"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7vuu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bf56"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2po7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ip7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cerf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1irs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h64ni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eangc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1twn2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxjyc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqqtk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qop4r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wj0pg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r1jd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8c4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxrb2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hokk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n0bjw"]
+
+[resource]
+default_font = ExtResource("1_fh624")
+default_font_size = 64
+Button/colors/font_color = Color(0, 0.811765, 0, 1)
+Button/colors/font_disabled_color = Color(0, 0.811765, 0, 0.501961)
+Button/colors/font_focus_color = Color(0, 0.811765, 0, 1)
+Button/colors/font_hover_color = Color(0, 0.811765, 0, 0.784314)
+Button/colors/font_hover_pressed_color = Color(0, 0.811765, 0, 1)
+Button/colors/font_outline_color = Color(0, 0.811765, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0.811765, 0, 1)
+Button/colors/icon_disabled_color = Color(0, 0.811765, 0, 0.4)
+Button/colors/icon_focus_color = Color(0, 0.811765, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0.811765, 0, 0.784314)
+Button/colors/icon_hover_pressed_color = Color(0, 0.811765, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0.811765, 0, 1)
+Button/colors/icon_pressed_color = Color(0, 0.811765, 0, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_evqgc")
+Button/styles/focus = SubResource("StyleBoxEmpty_35cvj")
+Button/styles/hover = SubResource("StyleBoxEmpty_fy5qc")
+Button/styles/normal = SubResource("StyleBoxEmpty_2j1mg")
+Button/styles/pressed = SubResource("StyleBoxEmpty_p7ql1")
+ItemList/colors/font_color = Color(0, 0.811765, 0, 1)
+ItemList/colors/font_hovered_color = Color(0, 0.811765, 0, 0.784314)
+ItemList/colors/font_outline_color = Color(0, 0.811765, 0, 1)
+ItemList/colors/font_selected_color = Color(0, 0.811765, 0, 1)
+ItemList/colors/guide_color = Color(0, 0.811765, 0, 0.25098)
+ItemList/styles/cursor = SubResource("StyleBoxEmpty_6wf0v")
+ItemList/styles/cursor_unfocused = SubResource("StyleBoxEmpty_ocg2m")
+ItemList/styles/focus = SubResource("StyleBoxEmpty_hxmo1")
+ItemList/styles/panel = SubResource("StyleBoxEmpty_snug7")
+ItemList/styles/selected = SubResource("StyleBoxEmpty_nyng2")
+Label/colors/font_color = Color(0, 0.811765, 0, 1)
+OptionButton/colors/font_color = Color(0, 0.811765, 0, 1)
+OptionButton/colors/font_disabled_color = Color(0, 0.811765, 0, 0.501961)
+OptionButton/colors/font_focus_color = Color(0, 0.811765, 0, 1)
+OptionButton/colors/font_hover_color = Color(0, 1, 0, 0.784314)
+OptionButton/colors/font_hover_pressed_color = Color(0, 0.811765, 0, 1)
+OptionButton/colors/font_outline_color = Color(0, 0.811765, 0, 1)
+OptionButton/colors/font_pressed_color = Color(0, 0.811765, 0, 1)
+OptionButton/styles/disabled = SubResource("StyleBoxEmpty_64g77")
+OptionButton/styles/disabled_mirrored = SubResource("StyleBoxEmpty_cm7o0")
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_sno4s")
+OptionButton/styles/hover = SubResource("StyleBoxEmpty_3ixis")
+OptionButton/styles/hover_mirrored = SubResource("StyleBoxEmpty_s7vuu")
+OptionButton/styles/normal = SubResource("StyleBoxEmpty_1bf56")
+OptionButton/styles/normal_mirrored = SubResource("StyleBoxEmpty_2po7w")
+OptionButton/styles/pressed = SubResource("StyleBoxEmpty_0ip7l")
+OptionButton/styles/pressed_mirrored = SubResource("StyleBoxEmpty_cerf8")
+Tree/colors/children_hl_line_color = Color(0, 0.294118, 0, 1)
+Tree/colors/custom_button_font_highlight = Color(0, 0.811765, 0, 1)
+Tree/colors/drop_position_color = Color(0, 0.811765, 0, 1)
+Tree/colors/font_color = Color(0, 0.513726, 0, 1)
+Tree/colors/font_outline_color = Color(0, 0.811765, 0, 1)
+Tree/colors/font_selected_color = Color(0, 0.811765, 0, 1)
+Tree/colors/guide_color = Color(0, 0.811765, 0, 0.25098)
+Tree/colors/parent_hl_line_color = Color(0, 0.294118, 0, 1)
+Tree/colors/relationship_line_color = Color(0, 0.294118, 0, 1)
+Tree/colors/title_button_color = Color(0, 0.513726, 0, 1)
+Tree/styles/button_pressed = SubResource("StyleBoxEmpty_h1irs")
+Tree/styles/cursor = SubResource("StyleBoxEmpty_h64ni")
+Tree/styles/cursor_unfocused = SubResource("StyleBoxEmpty_eangc")
+Tree/styles/custom_button = SubResource("StyleBoxEmpty_1twn2")
+Tree/styles/custom_button_hover = SubResource("StyleBoxEmpty_kxjyc")
+Tree/styles/custom_button_pressed = SubResource("StyleBoxEmpty_jqqtk")
+Tree/styles/focus = SubResource("StyleBoxEmpty_qop4r")
+Tree/styles/panel = SubResource("StyleBoxEmpty_wj0pg")
+Tree/styles/selected = SubResource("StyleBoxEmpty_r1jd8")
+Tree/styles/selected_focus = SubResource("StyleBoxEmpty_q8c4m")
+Tree/styles/title_button_hover = SubResource("StyleBoxEmpty_hxrb2")
+Tree/styles/title_button_normal = SubResource("StyleBoxEmpty_hokk5")
+Tree/styles/title_button_pressed = SubResource("StyleBoxEmpty_n0bjw")
