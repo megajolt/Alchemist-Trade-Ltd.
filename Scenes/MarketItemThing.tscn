@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cu6b0ct3jwkmt"]
+[gd_scene load_steps=2 format=3 uid="uid://cu6b0ct3jwkmt"]
+
+[ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_k8bbq"]
 
 [node name="MarketItemThing" type="Control"]
 custom_minimum_size = Vector2(390, 41)
@@ -11,11 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 30.0
-offset_bottom = 30.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -15.0
+offset_right = 35.0
+offset_bottom = 15.0
+grow_vertical = 2
 
-[node name="Panel" type="Button" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,10 +31,80 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel2" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Ingredient Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -11.5
+offset_right = 110.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("1_k8bbq")
+theme_override_font_sizes/font_size = 16
+text = "Ingredient"
+
+[node name="Cost Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 119.0
+offset_top = -11.5
+offset_right = 152.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("1_k8bbq")
+theme_override_font_sizes/font_size = 16
+text = "Cost: $"
+
+[node name="Cost Num" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 168.0
+offset_top = -11.5
+offset_right = 201.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("1_k8bbq")
+theme_override_font_sizes/font_size = 16
+text = "300"
+
+[node name="Available Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 210.0
+offset_top = -11.5
+offset_right = 273.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("1_k8bbq")
+theme_override_font_sizes/font_size = 16
+text = "Available:"
+
+[node name="Avail Num" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 278.0
+offset_top = -11.5
+offset_right = 295.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("1_k8bbq")
+theme_override_font_sizes/font_size = 16
+text = "10"
