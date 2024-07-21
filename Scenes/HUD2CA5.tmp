@@ -213,7 +213,6 @@ action_mode = 0
 text = "Available Contracts"
 
 [node name="Contracts" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.171

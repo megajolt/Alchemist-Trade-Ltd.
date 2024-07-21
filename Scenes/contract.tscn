@@ -6,28 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://fa34n0o2jp17" path="res://2DAssets/DefaultPortrait.png" id="3_0qo5q"]
 
 [node name="Contract" type="Control"]
+custom_minimum_size = Vector2(297, 297)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -710.0
-offset_bottom = -255.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="TextureRect" parent="."]
-modulate = Color(0, 0, 0, 0.352941)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 11.0
-offset_top = 11.0
-offset_right = -11.0
-offset_bottom = -9.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_e2mjm")
+anchor_right = 0.258
+anchor_bottom = 0.458
+offset_right = -0.216003
+offset_bottom = 0.215973
 
 [node name="Border" type="TextureRect" parent="."]
 layout_mode = 1
@@ -40,86 +24,194 @@ texture = ExtResource("2_x4c00")
 
 [node name="PortraitBorder" type="TextureRect" parent="."]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 20.0
-offset_right = 139.0
-offset_bottom = 140.0
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.067
+anchor_right = 0.468
+anchor_bottom = 0.471
+offset_left = -0.00800133
+offset_top = 0.101
+offset_right = 0.0039978
+offset_bottom = 0.112991
 texture = ExtResource("2_x4c00")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 134.0
-offset_bottom = 134.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.081
+anchor_right = 0.451
+anchor_bottom = 0.451
+offset_left = -8.67
+offset_top = -0.0569992
+offset_right = 0.0529938
+offset_bottom = 0.0529938
 texture = ExtResource("3_0qo5q")
 
 [node name="Name Title" type="Label" parent="."]
 layout_mode = 1
-offset_left = 145.0
-offset_top = 17.0
-offset_right = 215.0
-offset_bottom = 51.0
+anchors_preset = -1
+anchor_left = 0.488
+anchor_top = 0.057
+anchor_right = 0.64
+anchor_bottom = 0.12
+offset_left = 0.0639954
+offset_top = 0.0709991
+offset_right = -0.0800171
+offset_bottom = 2.36
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 16
 text = "Name:"
 autowrap_mode = 3
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 1
-offset_left = 145.0
-offset_top = 48.0
-offset_right = 427.0
-offset_bottom = 86.0
+anchors_preset = -1
+anchor_left = 0.485
+anchor_top = 0.114
+anchor_right = 0.956
+anchor_bottom = 0.208
+offset_left = -0.0449982
+offset_top = 0.141998
+offset_right = 0.0679932
+offset_bottom = 1.224
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "BingBong ShabaFurg"
+theme_override_font_sizes/font_size = 16
+text = "BingBong"
 autowrap_mode = 3
 
 [node name="Description Title" type="Label" parent="."]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 140.0
-offset_right = 154.0
-offset_bottom = 174.0
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.471
+anchor_right = 0.354
+anchor_bottom = 0.542
+offset_left = -0.00800133
+offset_top = 0.112991
+offset_right = -0.138
+offset_bottom = 0.0259857
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 16
 text = "Description:"
 autowrap_mode = 3
 
 [node name="Description" type="Label" parent="."]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 173.0
-offset_right = 426.0
-offset_bottom = 270.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.067
+anchor_top = 0.532
+anchor_right = 0.946
+anchor_bottom = 0.842
+offset_left = 0.101
+offset_top = -0.0039978
+offset_right = 0.0379944
+offset_bottom = -0.0740204
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 12
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
 autowrap_mode = 3
 
 [node name="Requirements Title" type="Label" parent="."]
 layout_mode = 1
-offset_left = 19.0
-offset_top = 263.0
-offset_right = 187.0
-offset_bottom = 297.0
+anchors_preset = -1
+anchor_left = 0.488
+anchor_top = 0.192
+anchor_right = 0.859
+anchor_bottom = 0.263
+offset_left = 0.0639954
+offset_top = -0.0240021
+offset_right = -0.123001
+offset_bottom = -0.111
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 16
 text = "Requirements:"
 autowrap_mode = 3
 
+[node name="Reward Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.051
+anchor_top = 0.842
+anchor_right = 0.29
+anchor_bottom = 0.912
+offset_left = -0.147001
+offset_top = -0.0740204
+offset_right = -0.130005
+offset_bottom = 0.135986
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Reward: $"
+autowrap_mode = 3
+
+[node name="Reward" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.286
+anchor_top = 0.842
+anchor_right = 0.471
+anchor_bottom = 0.912
+offset_left = 0.0579987
+offset_top = -0.0740204
+offset_right = 0.112991
+offset_bottom = 0.135986
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "00000"
+autowrap_mode = 3
+
+[node name="SynthTime Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.478
+anchor_top = 0.842
+anchor_right = 0.859
+anchor_bottom = 0.914
+offset_left = 0.0339966
+offset_top = -0.0740204
+offset_right = -0.123001
+offset_bottom = -0.458008
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Synthesis Time:"
+autowrap_mode = 3
+
+[node name="SynthTime" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.852
+anchor_top = 0.842
+anchor_right = 0.923
+anchor_bottom = 0.912
+offset_left = -0.0440216
+offset_top = -0.0740204
+offset_right = -0.131012
+offset_bottom = 0.135986
+theme = ExtResource("1_cvexc")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "50"
+autowrap_mode = 3
+
 [node name="ItemList" type="ItemList" parent="."]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 297.0
-offset_right = 425.0
-offset_bottom = 377.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.475
+anchor_top = 0.253
+anchor_right = 0.865
+anchor_bottom = 0.488
+offset_left = -0.0750122
+offset_top = -0.141006
+offset_right = 0.0949707
+offset_bottom = 0.0639954
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16

@@ -5,7 +5,7 @@ var moneyChange=false
 var changeAmount=0
 var day = 1
 var fulfilledContracts = 0
-var contractsRequired = 4
+var contractsRequired=0
 var Date = Time.get_datetime_dict_from_datetime_string("2060-1-1T08:00:00",false)
 var calYear = Date.year
 var calMonth = Date.month
@@ -19,6 +19,8 @@ var fast = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	contractsRequired = self.get_meta("RequiredContracts")
+	print("HUD: "+str(contractsRequired))
 	$Money.text = "$: "+str(money)
 	$Day.text = "Day: "+str(day)
 	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)
@@ -120,3 +122,5 @@ func _on_play_pressed():
 func _on_ffwd_pressed():
 	$Pause.button_pressed=false
 	$Play.button_pressed=false
+
+
