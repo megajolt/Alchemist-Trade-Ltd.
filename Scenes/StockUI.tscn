@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://de75tsnjv5qye"]
+
+[ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_t5yyk"]
+[ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="2_ftny8"]
+
+[node name="StockUi" type="Control"]
+custom_minimum_size = Vector2(570, 570)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -287.0
+offset_right = 288.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+offset_left = 5.0
+offset_right = 271.0
+offset_bottom = 83.0
+theme = ExtResource("1_t5yyk")
+theme_override_font_sizes/font_size = 60
+text = "Storage Co."
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 1
+offset_left = 5.0
+offset_top = 70.0
+offset_right = 319.0
+offset_bottom = 109.0
+theme = ExtResource("1_t5yyk")
+theme_override_font_sizes/font_size = 30
+text = "We Know What You Have"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -182.5
+offset_right = -5.0
+offset_bottom = -177.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ftny8")
+expand_mode = 1

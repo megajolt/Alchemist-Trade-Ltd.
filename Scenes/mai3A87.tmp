@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://epfff3hv30c5"]
+[gd_scene load_steps=11 format=3 uid="uid://epfff3hv30c5"]
 
 [ext_resource type="PackedScene" uid="uid://8fxancoecrt1" path="res://Scenes/HUD.tscn" id="1_5j6tr"]
 [ext_resource type="Script" path="res://Scripts/maingame.gd" id="1_67mp5"]
@@ -9,9 +9,6 @@
 [ext_resource type="Material" uid="uid://clg4cyrvmdafk" path="res://Materials/ScreenMat.tres" id="4_4mhtl"]
 [ext_resource type="Script" path="res://Scripts/RotationScript.gd" id="5_5g6tk"]
 [ext_resource type="PackedScene" uid="uid://dks65j107hth8" path="res://Scenes/MarketUI.tscn" id="5_eexhv"]
-[ext_resource type="PackedScene" uid="uid://de75tsnjv5qye" path="res://Scenes/StockUI.tscn" id="7_b3jq6"]
-[ext_resource type="PackedScene" uid="uid://d2hcug3ndmg2a" path="res://Scenes/Synthesizer.tscn" id="10_uif36"]
-[ext_resource type="PackedScene" uid="uid://jkv3w0r7cd2u" path="res://Scenes/Library.tscn" id="11_fpa8k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wj17d"]
 size = Vector3(0.00976563, 0.00860596, 0.00854492)
@@ -31,14 +28,8 @@ mesh = ExtResource("3_p5fwf")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_4mhtl")
 
-[node name="RigidBody3D" type="StaticBody3D" parent="Ingredient Stocks"]
+[node name="RigidBody3D" type="RigidBody3D" parent="Ingredient Stocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198111, 0, 0)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ingredient Stocks/RigidBody3D"]
 shape = SubResource("BoxShape3D_wj17d")
@@ -56,12 +47,6 @@ surface_material_override/0 = ExtResource("4_4mhtl")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Ingredient Market"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.249517)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ingredient Market/RigidBody3D"]
 shape = SubResource("BoxShape3D_wj17d")
@@ -78,18 +63,6 @@ mesh = ExtResource("3_p5fwf")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_4mhtl")
 
-[node name="RigidBody3D" type="StaticBody3D" parent="Recipe Lookup"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.220434, 0, 0)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Recipe Lookup/RigidBody3D"]
-shape = SubResource("BoxShape3D_wj17d")
-
 [node name="Synthesizer" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19, 0.485)
 mesh = ExtResource("1_asoov")
@@ -102,25 +75,10 @@ mesh = ExtResource("3_p5fwf")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("4_4mhtl")
 
-[node name="RigidBody3D" type="StaticBody3D" parent="Synthesizer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.220143)
-axis_lock_linear_x = true
-axis_lock_linear_y = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Synthesizer/RigidBody3D"]
-shape = SubResource("BoxShape3D_wj17d")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191, 0)
 fov = 60.0
 script = ExtResource("5_5g6tk")
-
-[node name="StockUi" parent="Camera3D" instance=ExtResource("7_b3jq6")]
-visible = false
 
 [node name="HUD" parent="Camera3D" instance=ExtResource("1_5j6tr")]
 
@@ -130,12 +88,6 @@ visible = false
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(1, 0, 0)
-
-[node name="LibraryUi" parent="Camera3D" instance=ExtResource("11_fpa8k")]
-visible = false
-
-[node name="SynthesizerUi" parent="Camera3D" instance=ExtResource("10_uif36")]
-visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1.25583, 0)
