@@ -94,7 +94,7 @@ shape = SubResource("BoxShape3D_wj17d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19, 0.485)
 mesh = ExtResource("1_asoov")
 skeleton = NodePath("../Ingredient Market")
-surface_material_override/0 = ExtResource("4_4mhtl")
+surface_material_override/0 = ExtResource("2_kvgqo")
 
 [node name="SynthScreen" type="MeshInstance3D" parent="Synthesizer"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.190612)
