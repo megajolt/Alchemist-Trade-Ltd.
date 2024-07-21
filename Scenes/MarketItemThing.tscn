@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cu6b0ct3jwkmt"]
+
+[node name="MarketItemThing" type="Control"]
+custom_minimum_size = Vector2(390, 41)
+layout_mode = 3
+anchor_right = 0.339
+anchor_bottom = 0.063
+offset_right = -0.528015
+offset_bottom = 0.175999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 30.0
+
+[node name="Panel" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

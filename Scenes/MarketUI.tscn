@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dks65j107hth8"]
+[gd_scene load_steps=4 format=3 uid="uid://dks65j107hth8"]
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_f2m5h"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="1_x3sq2"]
+[ext_resource type="PackedScene" uid="uid://cu6b0ct3jwkmt" path="res://Scenes/MarketItemThing.tscn" id="3_h3wp5"]
 
 [node name="MarketUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
@@ -20,34 +21,198 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.471
+anchor_bottom = 0.144
 offset_left = 5.0
-offset_right = 271.0
-offset_bottom = 83.0
+offset_right = 0.174988
+offset_bottom = 0.199997
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 60
 text = "AlcheMart"
 
 [node name="Subtitle" type="Label" parent="."]
 layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.11
+anchor_right = 0.5
+anchor_bottom = 0.177
 offset_left = 5.0
-offset_top = 63.0
-offset_right = 283.0
-offset_bottom = 102.0
+offset_top = -0.250004
+offset_right = -4.5
+offset_bottom = 0.224998
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 30
 text = "Ingredients For Cheap"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = -1
+anchor_top = 0.183
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 2.0
-offset_top = -182.5
-offset_right = -5.0
-offset_bottom = -177.5
+anchor_bottom = 0.191
+offset_left = 3.0
+offset_top = -0.225006
+offset_right = -4.0
+offset_bottom = 0.174995
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_x3sq2")
 expand_mode = 1
+
+[node name="Ingredients" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.209
+anchor_right = 0.703
+anchor_bottom = 0.991
+offset_left = -0.0250001
+offset_top = -0.175003
+offset_right = -0.225006
+offset_bottom = 0.174988
+theme = ExtResource("1_f2m5h")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Ingredients"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.016
+anchor_right = 0.987
+anchor_bottom = 0.987
+offset_left = 0.2
+offset_top = -0.2
+offset_right = 0.199982
+offset_bottom = -0.150024
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ingredients/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarketItemThing" parent="Ingredients/ScrollContainer/VBoxContainer" instance=ExtResource("3_h3wp5")]
+layout_mode = 2
+
+[node name="Ingredient Info" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.713
+anchor_top = 0.209
+anchor_right = 0.991
+anchor_bottom = 0.991
+offset_left = 0.0249634
+offset_top = -0.175003
+offset_right = 0.174988
+offset_bottom = 0.174988
+
+[node name="Ingredient Name" type="Label" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.011
+anchor_right = 0.837
+anchor_bottom = 0.098
+offset_left = -0.0400002
+offset_top = 0.0499997
+offset_right = -3.92
+offset_bottom = -10.1
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 30
+text = "Ingredient"
+
+[node name="Part Of Title" type="Label" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.642
+anchor_right = 0.812
+anchor_bottom = 0.729
+offset_left = -0.0400002
+offset_top = 0.100006
+offset_right = 0.0799866
+offset_bottom = -0.0500183
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 30
+text = "Part Of:"
+
+[node name="Cost" type="Label" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.519
+anchor_top = 0.551
+anchor_right = 0.894
+anchor_bottom = 0.64
+offset_left = -0.0400085
+offset_top = 1.05
+offset_right = -0.0400085
+offset_bottom = -3.05176e-05
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 30
+text = "300"
+
+[node name="DollarSign" type="Label" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.369
+anchor_top = 0.553
+anchor_right = 0.481
+anchor_bottom = 0.64
+offset_left = -0.0400009
+offset_top = 0.149979
+offset_right = 0.0399933
+offset_bottom = -3.05176e-05
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 30
+text = "$"
+
+[node name="Ingredient Image" type="TextureRect" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.107
+anchor_right = 0.331
+anchor_bottom = 0.218
+offset_left = -0.0400002
+offset_top = -0.150005
+offset_right = 0.0399933
+offset_bottom = -0.100006
+
+[node name="Ingredient Discription" type="Label" parent="Ingredient Info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 102.0
+offset_right = 156.0
+offset_bottom = 253.0
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 12
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non nisi est sit amet. Vitae et leo duis ut diam quam nulla porttitor. "
+autowrap_mode = 3
+
+[node name="Buy Button" type="Button" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.553
+anchor_right = 0.319
+anchor_bottom = 0.64
+offset_left = 3.0
+offset_top = 0.149979
+offset_right = -0.0400009
+offset_bottom = -3.05176e-05
+theme = ExtResource("1_f2m5h")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="ItemList" type="ItemList" parent="Ingredient Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.716
+anchor_right = 0.969
+anchor_bottom = 0.991
+offset_top = -0.200012
+offset_right = -0.0400085
+offset_bottom = 0.0499878
