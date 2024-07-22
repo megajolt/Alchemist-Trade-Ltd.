@@ -2,6 +2,7 @@ extends Panel
 
 @onready var scrollPanel = self
 @onready var vBox = $ScrollContainer/VBoxContainer
+@onready var stockList=$"/root/Node3D/Camera3D/StockUi/Ingredients"
 
 var ingredient_scene = preload("res://Scenes/MarketItemThing.tscn")
 var ingredient_names = ["Copper","Silver","Sulfur","Chlorine","Platinum","Iron","Gold","Cinnamon","Ruby Dust","Uranium","Oxygen","Water","Hydrogen","Salt","Mercury","Coal","Bone Dust","Bananas","Tires","Styrofoam"]

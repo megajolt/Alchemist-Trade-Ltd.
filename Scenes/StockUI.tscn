@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_t5yyk"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="2_ftny8"]
-[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="3_hw884"]
+[ext_resource type="Script" path="res://Scripts/StockIngredients.gd" id="3_eye1m"]
 
 [node name="StockUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
@@ -181,6 +181,7 @@ offset_top = -0.175003
 offset_right = -0.225006
 offset_bottom = 0.174988
 theme = ExtResource("1_t5yyk")
+script = ExtResource("3_eye1m")
 
 [node name="ItemList" type="ItemList" parent="Ingredients"]
 layout_mode = 1
@@ -193,11 +194,9 @@ offset_top = 0.0999994
 offset_bottom = -0.100006
 theme = ExtResource("1_t5yyk")
 theme_override_font_sizes/font_size = 16
-item_count = 2
 max_columns = 8
 same_column_width = true
 fixed_column_width = 50
-item_0/text = "999"
-item_0/icon = ExtResource("3_hw884")
-item_1/text = "999"
-item_1/icon = ExtResource("3_hw884")
+
+[connection signal="pressed" from="Ingredient Info/Sell" to="Ingredients" method="_on_sell_pressed"]
+[connection signal="item_selected" from="Ingredients/ItemList" to="Ingredients" method="_on_item_list_item_selected"]
