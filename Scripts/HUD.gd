@@ -1,10 +1,9 @@
 extends Control
 
 var money = 5000
-var moneyChange=false
 var changeAmount=0
 var day = 1
-var fulfilledContracts = 0
+var fulfilledContracts=0
 var contractsRequired=0
 var Date = Time.get_datetime_dict_from_datetime_string("2060-1-1T08:00:00",false)
 var calYear = Date.year
@@ -21,7 +20,7 @@ var fast = false
 func _ready():
 	contractsRequired = self.get_meta("RequiredContracts")
 	print("HUD: "+str(contractsRequired))
-	$Money.text = "$: "+str(money)
+	$Money.text = str(money)
 	$Day.text = "Day: "+str(day)
 	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)
 	$Date.text = str(calMonth)+"/"+str(calDay)+"/"+str(calYear)
@@ -54,10 +53,8 @@ func _update_time():
 func _input(event):
 	if(event.is_action_pressed("Add Money")):
 		changeAmount+=500
-		moneyChange=true
 	if(event.is_action_pressed("Subtract Money")):
 		changeAmount-=500
-		moneyChange=true
 
 
 func _update_date():
@@ -86,23 +83,30 @@ func _process(delta):
 	_contract_check()
 	_update_date()
 	_update_time()
-	if(moneyChange==true&&changeAmount!=0):
+	if(self.get_meta("MoneyChange")):
+		changeAmount=self.get_meta("ChangeAmount")
 		if(changeAmount<0):
-			$Subtract.text="- "+str(abs(changeAmount))
+			$"Subtract Amount".text=str(abs(changeAmount))
 			$Subtract.show()
-			money-=1
-			changeAmount+=1
-			$Money.text="$: "+str(money)
+			$"Subtract Amount".show()
+			money-=5
+			changeAmount+=5
+			self.set_meta("ChangeAmount",changeAmount)
+			$Money.text=str(money)
 		if(changeAmount>0):
-			$Add.text="+ "+str(changeAmount)
+			$"Add Amount".text=str(changeAmount)
 			$Add.show()
-			money+=1
-			changeAmount-=1
-			$Money.text="$: "+str(money)
+			$"Add Amount".show()
+			money+=5
+			changeAmount-=5
+			self.set_meta("ChangeAmount",changeAmount)
+			$Money.text=str(money)
 	if(changeAmount==0):
 		$Add.hide()
 		$Subtract.hide()
-		moneyChange=false
+		$"Add Amount".hide()
+		$"Subtract Amount".hide()
+		self.set_meta("MoneyChange",false)
 	if(money<0):
 		$Money.add_theme_color_override("font_color","#cf0000")
 	elif(money>=0):

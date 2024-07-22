@@ -13,7 +13,6 @@ offset_bottom = 0.175999
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owxwl")
-metadata/IngredientDescription = ""
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -24,6 +23,14 @@ offset_left = 5.0
 offset_top = -15.0
 offset_right = 35.0
 offset_bottom = 15.0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
@@ -39,9 +46,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 42.0
+offset_left = 44.0
 offset_top = -11.5
-offset_right = 112.0
+offset_right = 114.0
 offset_bottom = 11.5
 grow_vertical = 2
 theme = ExtResource("1_k8bbq")
@@ -53,9 +60,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 129.0
+offset_left = 115.0
 offset_top = -11.5
-offset_right = 178.0
+offset_right = 164.0
 offset_bottom = 11.5
 grow_vertical = 2
 theme = ExtResource("1_k8bbq")
@@ -67,9 +74,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 176.0
+offset_left = 162.0
 offset_top = -11.5
-offset_right = 209.0
+offset_right = 195.0
 offset_bottom = 11.5
 grow_vertical = 2
 theme = ExtResource("1_k8bbq")
@@ -81,9 +88,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 216.0
+offset_left = 202.0
 offset_top = -11.5
-offset_right = 283.0
+offset_right = 269.0
 offset_bottom = 11.5
 grow_vertical = 2
 theme = ExtResource("1_k8bbq")
@@ -95,22 +102,14 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 284.0
+offset_left = 270.0
 offset_top = -11.5
-offset_right = 301.0
+offset_right = 287.0
 offset_bottom = 11.5
 grow_vertical = 2
 theme = ExtResource("1_k8bbq")
 theme_override_font_sizes/font_size = 16
 text = "10"
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Buy" type="Button" parent="."]
 layout_mode = 1
@@ -125,6 +124,3 @@ grow_vertical = 2
 theme = ExtResource("1_k8bbq")
 theme_override_font_sizes/font_size = 20
 text = "BUY"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Buy" to="." method="_on_buy_pressed"]

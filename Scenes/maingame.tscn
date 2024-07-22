@@ -119,10 +119,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.191, 0)
 fov = 60.0
 script = ExtResource("5_5g6tk")
 
+[node name="HUD" parent="Camera3D" instance=ExtResource("1_5j6tr")]
+
 [node name="StockUi" parent="Camera3D" instance=ExtResource("7_b3jq6")]
 visible = false
-
-[node name="HUD" parent="Camera3D" instance=ExtResource("1_5j6tr")]
 
 [node name="MarketUi" parent="Camera3D" instance=ExtResource("5_eexhv")]
 visible = false

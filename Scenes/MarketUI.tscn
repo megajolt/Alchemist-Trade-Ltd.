@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_f2m5h"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="1_x3sq2"]
-[ext_resource type="PackedScene" uid="uid://cu6b0ct3jwkmt" path="res://Scenes/MarketItemThing.tscn" id="3_h3wp5"]
+[ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="3_dkhdr"]
 
 [node name="MarketUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
@@ -72,6 +72,7 @@ offset_top = -0.175003
 offset_right = -0.225006
 offset_bottom = 0.174988
 theme = ExtResource("1_f2m5h")
+script = ExtResource("3_dkhdr")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Ingredients"]
 layout_mode = 1
@@ -93,9 +94,6 @@ vertical_scroll_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="MarketItemThing" parent="Ingredients/ScrollContainer/VBoxContainer" instance=ExtResource("3_h3wp5")]
-layout_mode = 2
 
 [node name="Ingredient Info" type="Panel" parent="."]
 layout_mode = 1
@@ -122,7 +120,6 @@ offset_right = -3.92
 offset_bottom = -10.1
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 30
-text = "Ingredient"
 
 [node name="Part Of Title" type="Label" parent="Ingredient Info"]
 layout_mode = 1
@@ -146,13 +143,11 @@ anchor_left = 0.519
 anchor_top = 0.551
 anchor_right = 0.894
 anchor_bottom = 0.64
-offset_left = -0.0400085
+offset_left = -18.04
 offset_top = 1.05
-offset_right = -0.0400085
-offset_bottom = -3.05176e-05
+offset_right = -18.04
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 30
-text = "300"
 
 [node name="DollarSign" type="Label" parent="Ingredient Info"]
 layout_mode = 1
@@ -161,9 +156,9 @@ anchor_left = 0.369
 anchor_top = 0.553
 anchor_right = 0.481
 anchor_bottom = 0.64
-offset_left = -0.0400009
+offset_left = -18.04
 offset_top = 0.149979
-offset_right = 0.0399933
+offset_right = -17.96
 offset_bottom = -3.05176e-05
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 30
@@ -181,7 +176,7 @@ offset_top = -0.150005
 offset_right = 0.0399933
 offset_bottom = -0.100006
 
-[node name="Ingredient Discription" type="Label" parent="Ingredient Info"]
+[node name="Ingredient Description" type="Label" parent="Ingredient Info"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 102.0
@@ -189,22 +184,7 @@ offset_right = 156.0
 offset_bottom = 253.0
 theme = ExtResource("1_f2m5h")
 theme_override_font_sizes/font_size = 12
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non nisi est sit amet. Vitae et leo duis ut diam quam nulla porttitor. "
 autowrap_mode = 3
-
-[node name="Buy Button" type="Button" parent="Ingredient Info"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.553
-anchor_right = 0.319
-anchor_bottom = 0.64
-offset_left = 3.0
-offset_top = 0.149979
-offset_right = -0.0400009
-offset_bottom = -3.05176e-05
-theme = ExtResource("1_f2m5h")
-theme_override_font_sizes/font_size = 30
-text = "Buy"
 
 [node name="ItemList" type="ItemList" parent="Ingredient Info"]
 layout_mode = 1

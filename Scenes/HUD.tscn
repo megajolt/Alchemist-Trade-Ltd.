@@ -14,8 +14,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j5grr")
 metadata/RequiredContracts = 4
+metadata/MoneyChange = false
+metadata/ChangeAmount = 0
 
-[node name="Money" type="Label" parent="."]
+[node name="Money Title" type="Label" parent="."]
 layout_mode = 0
 offset_right = 114.0
 offset_bottom = 42.0
@@ -24,9 +26,22 @@ theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 32
-text = "$: 5000"
+text = "$:"
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 113.0
+offset_bottom = 42.0
+theme = ExtResource("3_aotyo")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_qt1ww")
+theme_override_font_sizes/font_size = 32
+text = "5000"
 
 [node name="Add" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_top = 33.0
@@ -37,9 +52,24 @@ theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 32
-text = "+ 500"
+text = "+"
+
+[node name="Add Amount" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 33.0
+offset_top = 33.0
+offset_right = 93.0
+offset_bottom = 75.0
+theme = ExtResource("3_aotyo")
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_qt1ww")
+theme_override_font_sizes/font_size = 32
+text = "500"
 
 [node name="Subtract" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 13.0
 offset_top = 33.0
@@ -50,7 +80,21 @@ theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_qt1ww")
 theme_override_font_sizes/font_size = 32
-text = "- 500"
+text = "-"
+
+[node name="Subtract Amount" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 33.0
+offset_top = 33.0
+offset_right = 93.0
+offset_bottom = 75.0
+theme = ExtResource("3_aotyo")
+theme_override_colors/font_color = Color(0.811765, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_qt1ww")
+theme_override_font_sizes/font_size = 32
+text = "500"
 
 [node name="Fulfilled Contracts" type="Label" parent="."]
 layout_mode = 1
