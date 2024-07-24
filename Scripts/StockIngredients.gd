@@ -7,6 +7,10 @@ var ingredientInfo
 var ingredientName
 var ingredientValue
 var ingredientDescription
+var synthesizerTopList
+var synthesizerBottomList
+var synthesizerTop
+var synthesizerBottom
 
 var item_descriptions=[]
 var item_names=[]
@@ -20,21 +24,31 @@ func _ready():
 	ingredientName=$"/root/Node3D/Camera3D/StockUi/Ingredient Info/Ingredient Name"
 	ingredientDescription=$"/root/Node3D/Camera3D/StockUi/Ingredient Info/Ingredient Description"
 	ingredientValue=$"/root/Node3D/Camera3D/StockUi/Ingredient Info/Value"
+	synthesizerBottomList=$"/root/Node3D/Camera3D/SynthesizerUi/BotIngredientWindow/ItemList"
+	synthesizerTopList=$"/root/Node3D/Camera3D/SynthesizerUi/TopIngredientWindow/ItemList"
+	synthesizerBottom=$"/root/Node3D/Camera3D/SynthesizerUi/BotIngredientWindow"
+	synthesizerTop=$"/root/Node3D/Camera3D/SynthesizerUi/TopIngredientWindow"
 
 func _on_item_bought(item_name: String,cost: String,item_description: String):
 	var itemIndex=item_names.find(item_name)
 	if(itemIndex>=0):
 		print("item exists")
 		$ItemList.set_item_text(itemIndex,str((int($ItemList.get_item_text(itemIndex))+1)))
+		synthesizerBottomList.set_item_text(itemIndex,str((int(synthesizerBottomList.get_item_text(itemIndex))+1)))
+		synthesizerTopList.set_item_text(itemIndex,str((int(synthesizerTopList.get_item_text(itemIndex))+1)))
 	else:
 		item_names.append(item_name)
 		item_descriptions.append(item_description)
 		item_costs.append(cost)
 		$ItemList.add_item(str(1),texture)
+		synthesizerTopList.add_item(str(1),texture)
+		synthesizerBottomList.add_item(str(1),texture)
 
 
 func _process(delta):
 	changeAmount=hudNode.get_meta("ChangeAmount")
+	synthesizerTop.set_meta("IngredientList",item_names)
+	synthesizerBottom.set_meta("IngredientList",item_names)
 
 
 func _on_item_list_item_selected(index):
@@ -49,8 +63,12 @@ func _on_sell_pressed():
 	hudNode.set_meta("MoneyChange",true)
 	var itemIndex=item_names.find(ingredientName.text)
 	$ItemList.set_item_text(itemIndex,str((int($ItemList.get_item_text(itemIndex))-1)))
+	synthesizerBottomList.set_item_text(itemIndex,str((int(synthesizerBottomList.get_item_text(itemIndex))-1)))
+	synthesizerTopList.set_item_text(itemIndex,str((int(synthesizerTopList.get_item_text(itemIndex))-1)))
 	if(int($ItemList.get_item_text(itemIndex))==0):
 		$ItemList.remove_item(itemIndex)
+		synthesizerBottomList.remove_item(itemIndex)
+		synthesizerTopList.remove_item(itemIndex)
 		item_costs.remove_at(itemIndex)
 		item_descriptions.remove_at(itemIndex)
 		item_names.remove_at(itemIndex)

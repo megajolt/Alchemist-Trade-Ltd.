@@ -42,34 +42,57 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_n0vho")
 
-[node name="ItemList1" type="ItemList" parent="TextureRect1"]
+[node name="SlotA" type="TextureRect" parent="TextureRect1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -44.5
-offset_right = 54.0
-offset_bottom = 44.5
+offset_left = -40.0
+offset_top = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_n0vho")
-allow_search = false
-auto_height = true
-item_count = 4
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(40, 40)
-item_0/text = ""
-item_0/icon = ExtResource("4_oum6i")
-item_1/text = ""
-item_1/icon = ExtResource("4_oum6i")
-item_2/text = ""
-item_2/icon = ExtResource("4_oum6i")
-item_3/text = ""
-item_3/icon = ExtResource("4_oum6i")
+texture = ExtResource("4_oum6i")
+
+[node name="SlotB" type="TextureRect" parent="TextureRect1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotC" type="TextureRect" parent="TextureRect1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotD" type="TextureRect" parent="TextureRect1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(140, 140)
@@ -94,34 +117,57 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_n0vho")
 
-[node name="ItemList2" type="ItemList" parent="TextureRect2"]
+[node name="SlotA" type="TextureRect" parent="TextureRect2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -44.5
-offset_right = 54.0
-offset_bottom = 44.5
+offset_left = -40.0
+offset_top = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_n0vho")
-allow_search = false
-auto_height = true
-item_count = 4
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(40, 40)
-item_0/text = ""
-item_0/icon = ExtResource("4_oum6i")
-item_1/text = ""
-item_1/icon = ExtResource("4_oum6i")
-item_2/text = ""
-item_2/icon = ExtResource("4_oum6i")
-item_3/text = ""
-item_3/icon = ExtResource("4_oum6i")
+texture = ExtResource("4_oum6i")
+
+[node name="SlotB" type="TextureRect" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotC" type="TextureRect" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotD" type="TextureRect" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
 
 [node name="TextureRect3" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(140, 140)
@@ -146,34 +192,57 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_n0vho")
 
-[node name="ItemList3" type="ItemList" parent="TextureRect3"]
+[node name="SlotA" type="TextureRect" parent="TextureRect3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -44.5
-offset_right = 54.0
-offset_bottom = 44.5
+offset_left = -40.0
+offset_top = -40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_n0vho")
-allow_search = false
-auto_height = true
-item_count = 4
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(40, 40)
-item_0/text = ""
-item_0/icon = ExtResource("4_oum6i")
-item_1/text = ""
-item_1/icon = ExtResource("4_oum6i")
-item_2/text = ""
-item_2/icon = ExtResource("4_oum6i")
-item_3/text = ""
-item_3/icon = ExtResource("4_oum6i")
+texture = ExtResource("4_oum6i")
+
+[node name="SlotB" type="TextureRect" parent="TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotC" type="TextureRect" parent="TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotD" type="TextureRect" parent="TextureRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(280, 280)
@@ -192,6 +261,58 @@ grow_vertical = 0
 texture = ExtResource("1_rlins")
 expand_mode = 1
 
+[node name="SlotA" type="TextureRect" parent="TextureRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotB" type="TextureRect" parent="TextureRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotC" type="TextureRect" parent="TextureRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
+[node name="SlotD" type="TextureRect" parent="TextureRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oum6i")
+
 [node name="Button4" type="Button" parent="TextureRect4"]
 layout_mode = 1
 anchors_preset = 15
@@ -200,35 +321,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_n0vho")
-
-[node name="ItemList4" type="ItemList" parent="TextureRect4"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -44.5
-offset_right = 54.0
-offset_bottom = 44.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("3_n0vho")
-allow_search = false
-auto_height = true
-item_count = 4
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(40, 40)
-item_0/text = ""
-item_0/icon = ExtResource("4_oum6i")
-item_1/text = ""
-item_1/icon = ExtResource("4_oum6i")
-item_2/text = ""
-item_2/icon = ExtResource("4_oum6i")
-item_3/text = ""
-item_3/icon = ExtResource("4_oum6i")
 
 [node name="TopIngredientWindow" type="Panel" parent="."]
 visible = false
@@ -240,9 +332,6 @@ offset_top = 4.0
 offset_bottom = -0.200012
 grow_horizontal = 2
 script = ExtResource("5_32aob")
-metadata/ItemImageData = null
-metadata/IngredientList = []
-metadata/SelectedItemName = ""
 
 [node name="TextureRect5" type="TextureRect" parent="TopIngredientWindow"]
 custom_minimum_size = Vector2(575, 281)
@@ -282,8 +371,6 @@ offset_top = 1.5
 offset_bottom = 0.174988
 grow_horizontal = 2
 script = ExtResource("6_53aur")
-metadata/ItemImageData = null
-metadata/IngredientList = []
 
 [node name="TextureRect5" type="TextureRect" parent="BotIngredientWindow"]
 custom_minimum_size = Vector2(575, 281)
@@ -308,17 +395,10 @@ offset_right = -19.825
 offset_bottom = 0.0749817
 theme = ExtResource("3_n0vho")
 theme_override_font_sizes/font_size = 16
-max_columns = 8
-same_column_width = true
-fixed_column_width = 50
 
 [connection signal="pressed" from="TextureRect1/Button1" to="." method="_on_button_1_pressed"]
-[connection signal="item_selected" from="TextureRect1/ItemList1" to="." method="_on_item_list_1_item_selected"]
 [connection signal="pressed" from="TextureRect2/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="item_selected" from="TextureRect2/ItemList2" to="." method="_on_item_list_2_item_selected"]
 [connection signal="pressed" from="TextureRect3/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="item_selected" from="TextureRect3/ItemList3" to="." method="_on_item_list_3_item_selected"]
 [connection signal="pressed" from="TextureRect4/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="item_selected" from="TextureRect4/ItemList4" to="." method="_on_item_list_4_item_selected"]
 [connection signal="item_selected" from="TopIngredientWindow/ItemList" to="TopIngredientWindow" method="_on_item_list_item_selected"]
 [connection signal="item_selected" from="BotIngredientWindow/ItemList" to="BotIngredientWindow" method="_on_item_list_item_selected"]
