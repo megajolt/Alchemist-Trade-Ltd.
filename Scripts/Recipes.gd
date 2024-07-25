@@ -8,7 +8,9 @@ extends Panel
 @onready var time_seconds=get_meta("RecipeSec")
 
 var recipe_scene = preload("res://Scenes/LibraryItem.tscn")
+
 var recipe_names = ["Mega Box","UltraWire","Exxtra Clean","Sticky Fuel","MiniReactor","Ultra Fertilizer","Poison+","PurePipes","DataCoin","Sundae","Extra Strength Peanuts","Strength Juice","Mobile Tracking Unit","AA Batteries","MegaCoat","Cloak Pouch","1/4 Inch Steel Beam","Salt Water","Large Waterskin (Pre-Filled)","Cube Of Mass"]
+
 var recipe_descriptions=["By combining several different metals to create a box, create an impenetrable container for all kinds of items."
 ,"An alloy of Gold and Platinum, surrounded in a Rubber coating."
 ,"Extra strength cleaning solution used to cull even the worst stains."
@@ -29,6 +31,7 @@ var recipe_descriptions=["By combining several different metals to create a box,
 ,"Used for pasta."
 ,"A popular item for standard menial workers."
 ,"A small cube with an immense mass. Popular as a paperweight."]
+
 var recipe_ingredients=[["Copper","Silver","Platinum","Iron"],["Gold","Platinum","Tires",""],["Chlorine","Water","Bone Dust",""],["Coal","Styrofoam","Oxygen","Sulfur"],["Uranium","Platinum","Water",""],["Sulfur","Oxygen","Bone Dust","Coal"],["Chlorine","Mercury","Water",""],["Gold","Platinum","Copper",""],["Ruby Dust","Gold","Tires","Iron"],["Bananas","Cinnamon","Styrofoam","Water"],["Styrofoam","Rubber","",""],["Water","Hydrogen","Chlorine","Bone Dust"],["Ruby Dust","Iron","Coal","Copper"],["Copper","Tires","Chlorine",""],["Tires","Tires","Bone Dust",""],["Ruby Dust","Bone Dust","Cinnamon","Sulfur"],["Coal","Iron","Iron","Coal"],["Salt","Water","",""],["Water","Water","Tires","Tires"],["Iron","Iron","Iron","Iron"]]
 
 

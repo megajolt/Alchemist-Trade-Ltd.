@@ -122,7 +122,6 @@ offset_right = 0.0799713
 offset_bottom = -0.100006
 theme = ExtResource("1_01d82")
 theme_override_font_sizes/font_size = 30
-text = "99:99:99"
 
 [node name="Ingredients Title" type="Label" parent="Recipe Info"]
 layout_mode = 1
@@ -151,19 +150,6 @@ offset_right = -0.0400085
 offset_bottom = 0.0499878
 theme = ExtResource("1_01d82")
 theme_override_font_sizes/font_size = 20
-item_count = 4
-item_0/text = "Copper"
-item_0/icon = ExtResource("3_elip1")
-item_0/selectable = false
-item_1/text = "Silver"
-item_1/icon = ExtResource("3_elip1")
-item_1/selectable = false
-item_2/text = "Tires"
-item_2/icon = ExtResource("3_elip1")
-item_2/selectable = false
-item_3/text = "Chlorine"
-item_3/icon = ExtResource("3_elip1")
-item_3/selectable = false
 
 [node name="Recipes" type="Panel" parent="."]
 layout_mode = 1
