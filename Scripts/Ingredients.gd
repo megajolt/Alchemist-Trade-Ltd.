@@ -27,6 +27,7 @@ var ingredient_descriptions=["Ethically sourced from free range powerlines, spen
 ,"Mrs. Banana thanks you for your continued cooperation and patience while riots are quelled in key growing locations."
 ,"Comes in sizes Small Medium Large and Extra Large."
 ,"All styrofoam sourced from recycled packaging."]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in 20:
@@ -36,8 +37,8 @@ func _ready():
 		ingredientLabel.text=ingredient_names[i]
 		costLabel.text=str(ingredient_prices[i])
 		ingredient_instance.set_meta("IngredientDescription",ingredient_descriptions[i])
+		
 		vBox.add_child(ingredient_instance)
-		print("Added ingredient instance:", i + 1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

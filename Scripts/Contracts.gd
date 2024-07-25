@@ -13,7 +13,6 @@ func _ready():
 	for i in range(num_required):
 		var contract_instance = contract_scene.instantiate()
 		vBox.add_child(contract_instance)
-		print("Added contract instance:", i + 1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

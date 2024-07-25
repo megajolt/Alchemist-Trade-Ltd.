@@ -62,14 +62,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.019
 anchor_top = 0.011
-anchor_right = 0.837
+anchor_right = 0.944
 anchor_bottom = 0.098
-offset_left = -0.0400002
-offset_top = 0.0499997
-offset_right = -3.92
-offset_bottom = -10.1
+offset_left = -0.0400004
+offset_top = 0.0500002
+offset_right = -0.0400391
+offset_bottom = -0.100002
 theme = ExtResource("1_01d82")
 theme_override_font_sizes/font_size = 30
+text_overrun_behavior = 3
 
 [node name="Ingredient Image" type="TextureRect" parent="Recipe Info"]
 layout_mode = 1

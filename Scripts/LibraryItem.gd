@@ -17,6 +17,11 @@ func _on_button_pressed():
 	var recipeTitle = descriptionNode.get_node("Recipe Name")
 	var recipeTime=descriptionNode.get_node("Time")
 	var recipeDescription=descriptionNode.get_node("Recipe Description")
+	var ingredList=descriptionNode.get_node("ItemList")
+	var ingredInfo = get_meta("IngredientList")
 	recipeTitle.text=$"Recipe Title".text
 	recipeTime.text=str(get_meta("TimeHour"))+":"+str(get_meta("TimeMin"))+":"+str(get_meta("TimeSec"))
 	recipeDescription.text=get_meta("recipeDescription")
+	ingredList.clear()
+	for ingredient in ingredInfo:
+		ingredList.add_item(ingredient)

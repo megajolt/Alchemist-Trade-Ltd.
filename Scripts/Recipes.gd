@@ -1,6 +1,5 @@
 extends Panel
 
-
 @onready var scrollPanel = self
 @onready var vBox = $ScrollContainer/VBoxContainer
 @onready var time_hours=get_meta("RecipeHour")
@@ -47,8 +46,8 @@ func _ready():
 		recipe_instance.set_meta("TimeHour",time_hours[i])
 		recipe_instance.set_meta("TimeMin",time_minutes[i])
 		recipe_instance.set_meta("TimeSec",time_seconds[i])
+		recipe_instance.set_meta("IngredientList",recipe_ingredients[i])
 		vBox.add_child(recipe_instance)
-		print("Added recipe instance:", i + 1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

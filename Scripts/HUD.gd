@@ -19,7 +19,6 @@ var fast = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	contractsRequired = self.get_meta("RequiredContracts")
-	print("HUD: "+str(contractsRequired))
 	$Money.text = str(money)
 	$Day.text = "Day: "+str(day)
 	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)

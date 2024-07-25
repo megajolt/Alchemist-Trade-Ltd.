@@ -237,15 +237,10 @@ text = "Pass Day"
 
 [node name="Available Contracts" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1152.0
-offset_top = -578.0
-offset_right = -881.0
-offset_bottom = -528.0
+anchors_preset = -1
+offset_top = 70.0
+offset_right = 271.0
+offset_bottom = 120.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("3_aotyo")
@@ -260,12 +255,9 @@ text = "Available Contracts"
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.171
-anchor_right = 0.258
-anchor_bottom = 0.63
-offset_top = 0.192001
-offset_right = -0.216003
-offset_bottom = -0.240021
+offset_top = 111.0
+offset_right = 297.0
+offset_bottom = 408.0
 theme = ExtResource("3_aotyo")
 script = ExtResource("4_l7la0")
 

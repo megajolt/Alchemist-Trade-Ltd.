@@ -18,6 +18,7 @@ metadata/recipeDescription = ""
 metadata/TimeHour = 0
 metadata/TimeMin = 0
 metadata/TimeSec = 0
+metadata/IngredientList = []
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
