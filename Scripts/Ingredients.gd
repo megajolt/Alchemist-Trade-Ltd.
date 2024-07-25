@@ -8,8 +8,8 @@ var ingredient_scene = preload("res://Scenes/MarketItemThing.tscn")
 var ingredient_names = ["Copper","Silver","Sulfur","Chlorine","Platinum","Iron","Gold","Cinnamon","Ruby Dust","Uranium","Oxygen","Water","Hydrogen","Salt","Mercury","Coal","Bone Dust","Bananas","Tires","Styrofoam"]
 var ingredient_prices=[480, 355, 550, 425, 525, 585, 635, 620, 685, 415, 460, 650, 605, 435, 430, 790, 330, 505, 690, 335]
 var ingredient_descriptions=["Ethically sourced from free range powerlines, spent bullets, and recycled phones."
-,"For a special occasion, or hunting that suspiciously pale neighbor.",
-"Smells like eggs. Is not eggs. Do not consume."
+,"For a special occasion, or hunting that suspiciously pale neighbor."
+,"Smells like eggs. Is not eggs. Do not consume."
 ,"WARNING: DO NOT MIX WITH CONVENTIONAL CLEANING LIQUIDS. WEAR PERSONAL PROTECTIVE EQUIPMENT WHEN HANDLING."
 ,'Sourced by: Brother Sons Mining Collective "We pride ourselves on hiring everyone who comes through our door looking for an opportunity".'
 ,"Every gram authenticated by our Fae experts."

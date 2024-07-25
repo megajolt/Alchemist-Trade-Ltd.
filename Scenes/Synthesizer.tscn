@@ -240,7 +240,6 @@ offset_top = 4.0
 offset_bottom = -0.200012
 grow_horizontal = 2
 script = ExtResource("5_32aob")
-metadata/ItemImageData = null
 metadata/IngredientList = []
 metadata/SelectedItemName = ""
 
@@ -282,7 +281,6 @@ offset_top = 1.5
 offset_bottom = 0.174988
 grow_horizontal = 2
 script = ExtResource("6_53aur")
-metadata/ItemImageData = null
 metadata/IngredientList = []
 
 [node name="TextureRect5" type="TextureRect" parent="BotIngredientWindow"]

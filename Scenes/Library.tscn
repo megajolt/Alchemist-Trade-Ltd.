@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://jkv3w0r7cd2u"]
+[gd_scene load_steps=5 format=3 uid="uid://jkv3w0r7cd2u"]
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_01d82"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="2_d74jr"]
+[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="3_elip1"]
+[ext_resource type="Script" path="res://Scripts/Recipes.gd" id="4_b4x1m"]
 
 [node name="LibraryUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
@@ -42,3 +44,161 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_d74jr")
 expand_mode = 1
+
+[node name="Recipe Info" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.713
+anchor_top = 0.209
+anchor_right = 0.991
+anchor_bottom = 0.991
+offset_left = 0.0249634
+offset_top = -0.175003
+offset_right = 0.174988
+offset_bottom = 0.174988
+
+[node name="Recipe Name" type="Label" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.011
+anchor_right = 0.837
+anchor_bottom = 0.098
+offset_left = -0.0400002
+offset_top = 0.0499997
+offset_right = -3.92
+offset_bottom = -10.1
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 30
+
+[node name="Ingredient Image" type="TextureRect" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.107
+anchor_right = 0.331
+anchor_bottom = 0.218
+offset_left = -0.0400002
+offset_top = -0.150005
+offset_right = 0.0399933
+offset_bottom = -0.100006
+texture = ExtResource("3_elip1")
+
+[node name="Recipe Description" type="Label" parent="Recipe Info"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 102.0
+offset_right = 156.0
+offset_bottom = 198.0
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3
+
+[node name="Time Title" type="Label" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.458
+anchor_right = 0.475
+anchor_bottom = 0.547
+offset_left = 2.96
+offset_top = -0.100021
+offset_right = -1.52588e-05
+offset_bottom = -0.150024
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 30
+text = "Time:"
+
+[node name="Time" type="Label" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.037
+anchor_top = 0.549
+anchor_right = 0.762
+anchor_bottom = 0.638
+offset_left = 0.079999
+offset_top = -0.0500183
+offset_right = 0.0799713
+offset_bottom = -0.100006
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 30
+text = "99:99:99"
+
+[node name="Ingredients Title" type="Label" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.642
+anchor_right = 0.812
+anchor_bottom = 0.729
+offset_left = -0.0400004
+offset_top = -6.89999
+offset_right = 27.08
+offset_bottom = -6.04999
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 30
+text = "Ingredients:"
+
+[node name="ItemList" type="ItemList" parent="Recipe Info"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.716
+anchor_right = 0.969
+anchor_bottom = 0.991
+offset_top = -0.200012
+offset_right = -0.0400085
+offset_bottom = 0.0499878
+theme = ExtResource("1_01d82")
+theme_override_font_sizes/font_size = 20
+item_count = 4
+item_0/text = "Copper"
+item_0/icon = ExtResource("3_elip1")
+item_0/selectable = false
+item_1/text = "Silver"
+item_1/icon = ExtResource("3_elip1")
+item_1/selectable = false
+item_2/text = "Tires"
+item_2/icon = ExtResource("3_elip1")
+item_2/selectable = false
+item_3/text = "Chlorine"
+item_3/icon = ExtResource("3_elip1")
+item_3/selectable = false
+
+[node name="Recipes" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.007
+anchor_top = 0.209
+anchor_right = 0.703
+anchor_bottom = 0.991
+offset_left = -0.0250001
+offset_top = -0.175003
+offset_right = -0.225006
+offset_bottom = 0.174988
+theme = ExtResource("1_01d82")
+script = ExtResource("4_b4x1m")
+metadata/RecipeHour = [13, 37, 21, 22, 8, 26, 34, 3, 5, 28, 22, 14, 22, 45, 0, 23, 24, 33, 47, 38]
+metadata/RecipeMin = PackedInt64Array(40, 59, 36, 32, 25, 28, 14, 41, 23, 43, 24, 29, 47, 18, 40, 47, 59, 44, 13, 56)
+metadata/RecipeSec = PackedInt64Array(32, 42, 15, 52, 55, 8, 37, 15, 53, 50, 47, 24, 41, 6, 47, 49, 11, 36, 37, 48)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Recipes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.016
+anchor_right = 0.987
+anchor_bottom = 0.987
+offset_left = 0.2
+offset_top = -0.2
+offset_right = 0.199982
+offset_bottom = -0.150024
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Recipes/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

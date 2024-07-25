@@ -25,8 +25,6 @@ func _on_buy_pressed():
 		hudNode.set_meta("ChangeAmount",changeAmount)
 		hudNode.set_meta("MoneyChange",true)
 		item_bought.emit($"Ingredient Title".text,$"Cost Num".text,get_meta("IngredientDescription"))
-	
-	
 
 
 func _on_button_pressed():
