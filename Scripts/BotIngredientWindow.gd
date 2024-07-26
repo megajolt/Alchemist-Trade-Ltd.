@@ -21,3 +21,4 @@ func _on_item_list_item_selected(index):
 		$ItemList.deselect_all()
 		set_meta("ItemImageData",itemIcon)
 		set_meta("SelectedItemName",itemNames[index])
+		set_meta("ItemIndex",index)

@@ -22,6 +22,7 @@ offset_bottom = 288.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3pt24")
+metadata/ItemIndexList = [null, null, null, null]
 
 [node name="TextureRect1" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(280, 280)
@@ -70,6 +71,24 @@ item_2/text = ""
 item_2/icon = ExtResource("4_oum6i")
 item_3/text = ""
 item_3/icon = ExtResource("4_oum6i")
+
+[node name="Timer1" type="Label" parent="TextureRect1"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -84.0
+offset_right = 70.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_n0vho")
+theme_override_font_sizes/font_size = 30
+text = "00:00:00"
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(140, 140)
@@ -123,6 +142,24 @@ item_2/icon = ExtResource("4_oum6i")
 item_3/text = ""
 item_3/icon = ExtResource("4_oum6i")
 
+[node name="Timer2" type="Label" parent="TextureRect2"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -84.0
+offset_right = 71.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_n0vho")
+theme_override_font_sizes/font_size = 30
+text = "00:00:00"
+
 [node name="TextureRect3" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(140, 140)
 layout_mode = 1
@@ -174,6 +211,24 @@ item_2/text = ""
 item_2/icon = ExtResource("4_oum6i")
 item_3/text = ""
 item_3/icon = ExtResource("4_oum6i")
+
+[node name="Timer3" type="Label" parent="TextureRect3"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -84.0
+offset_right = 71.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_n0vho")
+theme_override_font_sizes/font_size = 30
+text = "00:00:00"
 
 [node name="TextureRect4" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(280, 280)
@@ -230,6 +285,24 @@ item_2/icon = ExtResource("4_oum6i")
 item_3/text = ""
 item_3/icon = ExtResource("4_oum6i")
 
+[node name="Timer4" type="Label" parent="TextureRect4"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -84.0
+offset_right = 71.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_n0vho")
+theme_override_font_sizes/font_size = 30
+text = "00:00:00"
+
 [node name="TopIngredientWindow" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -242,6 +315,7 @@ grow_horizontal = 2
 script = ExtResource("5_32aob")
 metadata/IngredientList = []
 metadata/SelectedItemName = ""
+metadata/ItemIndex = 0
 
 [node name="TextureRect5" type="TextureRect" parent="TopIngredientWindow"]
 custom_minimum_size = Vector2(575, 281)

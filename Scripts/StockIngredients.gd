@@ -38,8 +38,11 @@ func _on_item_bought(item_name: String,cost: String,item_description: String):
 		synthesizerTopList.set_item_text(itemIndex,str((int(synthesizerTopList.get_item_text(itemIndex))+1)))
 	else:
 		item_names.append(item_name)
+		set_meta("ItemNames",item_names)
 		item_descriptions.append(item_description)
+		set_meta("ItemDescriptions",item_descriptions)
 		item_costs.append(cost)
+		set_meta("ItemCosts",item_costs)
 		$ItemList.add_item(str(1),texture)
 		synthesizerTopList.add_item(str(1),texture)
 		synthesizerBottomList.add_item(str(1),texture)
@@ -70,6 +73,9 @@ func _on_sell_pressed():
 		synthesizerBottomList.remove_item(itemIndex)
 		synthesizerTopList.remove_item(itemIndex)
 		item_costs.remove_at(itemIndex)
+		set_meta("ItemCosts",item_costs)
 		item_descriptions.remove_at(itemIndex)
+		set_meta("ItemDescriptions",item_descriptions)
 		item_names.remove_at(itemIndex)
+		set_meta("ItemNames",item_names)
 	

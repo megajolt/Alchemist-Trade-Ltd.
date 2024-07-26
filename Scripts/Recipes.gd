@@ -5,6 +5,7 @@ extends Panel
 @onready var time_hours=get_meta("RecipeHour")
 @onready var time_minutes=get_meta("RecipeMin")
 @onready var time_seconds=get_meta("RecipeSec")
+@onready var synthesizer=$/root/Node3D/Camera3D/SynthesizerUi
 
 var recipe_scene = preload("res://Scenes/LibraryItem.tscn")
 
@@ -36,6 +37,11 @@ var recipe_ingredients=[["Copper","Silver","Platinum","Iron"],["Gold","Platinum"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	synthesizer.set_meta("ValidRecipes",recipe_ingredients)
+	synthesizer.set_meta("RecipeHours",time_hours)
+	synthesizer.set_meta("RecipeMins",time_minutes)
+	synthesizer.set_meta("RecipeSecs",time_seconds)
+	synthesizer.set_meta("RecipeNames",recipe_names)
 	for i in 20:
 		var recipe_instance = recipe_scene.instantiate()
 		var recipeLabel=recipe_instance.get_node("Recipe Title")
@@ -48,6 +54,7 @@ func _ready():
 		recipe_instance.set_meta("TimeSec",time_seconds[i])
 		recipe_instance.set_meta("IngredientList",recipe_ingredients[i])
 		vBox.add_child(recipe_instance)
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
