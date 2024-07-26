@@ -8,11 +8,6 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
 func _on_button_pressed():
 	var recipeTitle = descriptionNode.get_node("Recipe Name")
 	var recipeTime=descriptionNode.get_node("Time")

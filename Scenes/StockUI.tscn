@@ -182,6 +182,9 @@ offset_right = -0.225006
 offset_bottom = 0.174988
 theme = ExtResource("1_t5yyk")
 script = ExtResource("3_eye1m")
+metadata/ItemNames = []
+metadata/ItemCosts = []
+metadata/ItemDescriptions = []
 
 [node name="ItemList" type="ItemList" parent="Ingredients"]
 layout_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://h46e3custr11"]
 
+[ext_resource type="Script" path="res://Scripts/contract.gd" id="1_0p6j1"]
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_cvexc"]
-[ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="1_e2mjm"]
 [ext_resource type="Texture2D" uid="uid://dawaqyer6v36a" path="res://2DAssets/Frame.png" id="2_x4c00"]
 [ext_resource type="Texture2D" uid="uid://fa34n0o2jp17" path="res://2DAssets/DefaultPortrait.png" id="3_0qo5q"]
 
@@ -12,6 +12,7 @@ anchor_right = 0.258
 anchor_bottom = 0.458
 offset_right = -0.216003
 offset_bottom = 0.215973
+script = ExtResource("1_0p6j1")
 
 [node name="Border" type="TextureRect" parent="."]
 layout_mode = 1
@@ -109,11 +110,11 @@ anchor_bottom = 0.842
 offset_left = 0.101
 offset_top = -0.0039978
 offset_right = 0.0379944
-offset_bottom = -0.0740204
+offset_bottom = -38.074
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 12
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 autowrap_mode = 3
 
 [node name="Requirements Title" type="Label" parent="."]
@@ -141,9 +142,9 @@ anchor_top = 0.842
 anchor_right = 0.29
 anchor_bottom = 0.912
 offset_left = -0.147001
-offset_top = -0.0740204
+offset_top = -30.074
 offset_right = -0.130005
-offset_bottom = 0.135986
+offset_bottom = -29.864
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16
@@ -158,9 +159,9 @@ anchor_top = 0.842
 anchor_right = 0.471
 anchor_bottom = 0.912
 offset_left = 0.0579987
-offset_top = -0.0740204
+offset_top = -30.074
 offset_right = 0.112991
-offset_bottom = 0.135986
+offset_bottom = -29.864
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16
@@ -175,9 +176,9 @@ anchor_top = 0.842
 anchor_right = 0.859
 anchor_bottom = 0.914
 offset_left = 0.0339966
-offset_top = -0.0740204
+offset_top = -30.074
 offset_right = -0.123001
-offset_bottom = -0.458008
+offset_bottom = -30.458
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16
@@ -191,10 +192,10 @@ anchor_left = 0.852
 anchor_top = 0.842
 anchor_right = 0.923
 anchor_bottom = 0.912
-offset_left = -0.0440216
-offset_top = -0.0740204
-offset_right = -0.131012
-offset_bottom = 0.135986
+offset_left = -0.0440369
+offset_top = -30.074
+offset_right = -0.131042
+offset_bottom = -29.864
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16
@@ -215,14 +216,19 @@ offset_bottom = 0.0939941
 theme = ExtResource("1_cvexc")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_font_sizes/font_size = 16
-item_count = 2
 max_columns = 2
 same_column_width = true
 icon_scale = 0.5
 fixed_icon_size = Vector2i(60, 60)
-item_0/text = "Item: 1"
-item_0/icon = ExtResource("1_e2mjm")
-item_0/selectable = false
-item_1/text = "Item2: 3"
-item_1/icon = ExtResource("1_e2mjm")
-item_1/selectable = false
+
+[node name="FullFill" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 246.0
+offset_right = 204.0
+offset_bottom = 285.0
+theme = ExtResource("1_cvexc")
+theme_override_font_sizes/font_size = 30
+text = "Complete"
+
+[connection signal="pressed" from="FullFill" to="." method="_on_full_fill_pressed"]

@@ -55,8 +55,3 @@ func _ready():
 		recipe_instance.set_meta("IngredientList",recipe_ingredients[i])
 		vBox.add_child(recipe_instance)
 		
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
