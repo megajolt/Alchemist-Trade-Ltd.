@@ -47,7 +47,10 @@ func _ready():
 			contract_instance.get_node("ItemList").add_item(j)
 		vBox.add_child(contract_instance)
 
-
 func _on_available_contracts_toggled(toggled_on):
 	scrollPanel.visible = !scrollPanel.visible
-	pass # Replace with function body.
+
+func _on_contract_fulfilled(path):
+	var node = get_node(path)
+	node.queue_free()
+	pass

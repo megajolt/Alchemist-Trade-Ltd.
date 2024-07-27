@@ -329,6 +329,7 @@ func remove_items():
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemNames",item_names)
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemCosts",item_costs)
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemDescriptions",item_descriptions)
+
 func _on_item_list_1_item_selected(index):
 	itemList1Ingredients[index]=botIngredientPanel.get_meta("SelectedItemName")
 	$TextureRect1/ItemList1.set_item_icon(index,botIngredientPanel.get_meta("ItemImageData"))
