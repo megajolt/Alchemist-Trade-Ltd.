@@ -15,22 +15,19 @@ var second = Date.second
 var pause = false
 var fast = false
 
-
+signal dayPassed()
+signal weekPassed()
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var contractGen= Callable($Contracts,"gen_new_contracts")
+	weekPassed.connect(contractGen)
+	var restock=Callable($/root/Node3D/Camera3D/MarketUi/Ingredients,"_restock")
+	dayPassed.connect(restock)
 	contractsRequired = self.get_meta("RequiredContracts")
 	$Money.text = str(money)
 	$Day.text = "Day: "+str(day)
-	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)
 	$Date.text = str(calMonth)+"/"+str(calDay)+"/"+str(calYear)
 	$Time.text = str(hour)+":"+str(minute)+":"+str(second)
-
-
-func _contract_check():
-	if(day%7==0&&fulfilledContracts!=contractsRequired||money<-10000):
-		$GameOver.show()
-	else:
-		$GameOver.hide()
 
 
 func _update_time():
@@ -48,7 +45,6 @@ func _update_time():
 		hour=hour+1
 	$Time.text = str(hour)+":"+str(minute)+":"+str(second)
 
-
 func _input(event):
 	if(event.is_action_pressed("Add Money")):
 		changeAmount+=500
@@ -60,11 +56,21 @@ func _update_date():
 	if($"Pass Day".button_pressed||hour==24):
 		$"Pass Day".button_pressed=false
 		$"Pass Day".disabled = true
+		dayPassed.emit()
 		day=day+1
 		calDay=calDay+1
 		hour=8
 		minute=0
 		second=0
+		if(day%7==0&&day!=0&&fulfilledContracts!=contractsRequired||money<-10000&&day!=0):
+			$GameOver.show()
+		elif(day%7==0&&day!=0):
+			contractsRequired+=contractsRequired/2
+			fulfilledContracts=0
+			set_meta("RequiredContracts",contractsRequired)
+			weekPassed.emit()
+		else:
+			$GameOver.hide()
 	if(calDay>=28):
 		calDay=1
 		calMonth=calMonth+1
@@ -79,9 +85,10 @@ func _update_date():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	_contract_check()
 	_update_date()
 	_update_time()
+	fulfilledContracts=get_meta("FulfilledContracts")
+	$"Fulfilled Contracts".text="Contracts: "+str(fulfilledContracts)+"/"+str(contractsRequired)
 	if(self.get_meta("MoneyChange")):
 		changeAmount=self.get_meta("ChangeAmount")
 		if(changeAmount<0):

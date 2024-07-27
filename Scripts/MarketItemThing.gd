@@ -1,7 +1,7 @@
 extends Control
 
-@onready var currentStock = int($"Avail Num".text)
-@onready var price = int($"Cost Num".text)
+@onready var currentStock = get_meta("Stock")
+@onready var price = get_meta("Price")
 @onready var hudNode=$"/root/Node3D/Camera3D/HUD"
 @onready var stockList=$"/root/Node3D/Camera3D/StockUi/Ingredients"
 @onready var descriptionNode = $"/root/Node3D/Camera3D/MarketUi/Ingredient Info"
@@ -15,12 +15,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	changeAmount=hudNode.get_meta("ChangeAmount")
-
+	currentStock = get_meta("Stock")
+	price=get_meta("Price")
+	$"Avail Num".text=str(currentStock)
+	$"Cost Num".text=str(price)
 
 func _on_buy_pressed():
 	if(currentStock>0):
 		currentStock-=1
-		$"Avail Num".text=str(currentStock)
+		set_meta("Stock",currentStock)
 		changeAmount-=int($"Cost Num".text)
 		hudNode.set_meta("ChangeAmount",changeAmount)
 		hudNode.set_meta("MoneyChange",true)

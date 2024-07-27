@@ -33,6 +33,11 @@ var contract_items=[["Exxtra Clean","Sticky Fuel","Mega Box"],["UltraWire"],["Da
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	gen_new_contracts()
+
+func gen_new_contracts():
+	for child in $ScrollContainer/VBoxContainer.get_children():
+		child.queue_free()
 	var num_required = get_parent().get_meta("RequiredContracts")
 	num_required += floor(num_required * 0.25)
 

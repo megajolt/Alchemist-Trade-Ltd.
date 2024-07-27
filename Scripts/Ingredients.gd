@@ -37,5 +37,15 @@ func _ready():
 		ingredientLabel.text=ingredient_names[i]
 		costLabel.text=str(ingredient_prices[i])
 		ingredient_instance.set_meta("IngredientDescription",ingredient_descriptions[i])
+		ingredient_instance.set_meta("Price",ingredient_prices[i])
 		
 		vBox.add_child(ingredient_instance)
+
+func _restock():
+	for child in vBox.get_children():
+		var childStock = child.get_meta("Stock")
+		childStock += randi_range(-2,2)
+		child.set_meta("Stock",childStock)
+		var price = child.get_meta("Price")
+		price+=randi_range(-(price-price/2),(price-price/2))
+		child.set_meta("Price",price)

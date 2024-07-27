@@ -15,6 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owxwl")
 metadata/IngredientDescription = ""
+metadata/Stock = 10
+metadata/Price = 0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

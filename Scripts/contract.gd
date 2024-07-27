@@ -24,6 +24,7 @@ func _process(delta):
 func _on_full_fill_pressed():
 	var items=0
 	var stockNames = stock.get_meta("ItemNames")
+	var fulfilled=hudNode.get_meta("FulfilledContracts")
 	for i in range(stockList.get_item_count()):
 		for j in range($ItemList.get_item_count()):
 			if($ItemList.get_item_text(j)==stockNames[i]):
@@ -38,6 +39,8 @@ func _on_full_fill_pressed():
 					stockList.set_item_text(i,str(int(stockList.get_item_text(i))-1))
 					bottomWindowList.set_item_text(i,str(int(bottomWindowList.get_item_text(i))-1))
 					topWindowList.set_item_text(i,str(int(topWindowList.get_item_text(i))-1))
+					fulfilled+=1
+					hudNode.set_meta("FulfilledContracts",fulfilled)
 	var item_costs=stock.get_meta("ItemCosts")
 	var item_descriptions=stock.get_meta("ItemDescriptions")
 	var item_names=stock.get_meta("ItemNames")

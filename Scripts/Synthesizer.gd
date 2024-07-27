@@ -113,9 +113,9 @@ func _on_button_1_pressed():
 				recipe1Desc=recipe_descriptions[i]
 				print(get_meta("ItemIndexList"))
 				remove_items()
-				time1[0]=0
-				time1[1]=0
-				time1[2]=10
+				time1[0]=recipeHours[i]
+				time1[1]=recipeMins[i]
+				time1[2]=recipeSecs[i]
 				break
 	print("Button1")
 	botIngredientPanel.visible=!botIngredientPanel.visible
@@ -139,9 +139,9 @@ func _on_button_2_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe2=recipeNames[i]
 				recipe2Desc=recipe_descriptions[i]
-				time2[0]=0
-				time2[1]=0
-				time2[2]=10
+				time2[0]=recipeHours[i]
+				time2[1]=recipeMins[i]
+				time2[2]=recipeSecs[i]
 				break
 	print("Button2")
 	botIngredientPanel.visible=!botIngredientPanel.visible
@@ -164,9 +164,9 @@ func _on_button_3_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe3=recipeNames[i]
 				recipe3Desc=recipe_descriptions[i]
-				time3[0]=0
-				time3[1]=0
-				time3[2]=10
+				time3[0]=recipeHours[i]
+				time3[1]=recipeMins[i]
+				time3[2]=recipeSecs[i]
 				break
 	print("Button3")
 	topIngredientPanel.visible=!topIngredientPanel.visible
@@ -190,9 +190,9 @@ func _on_button_4_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe4=recipeNames[i]
 				recipe4Desc=recipe_descriptions[i]
-				time4[0]=0
-				time4[1]=0
-				time4[2]=10
+				time4[0]=recipeHours[i]
+				time4[1]=recipeMins[i]
+				time4[2]=recipeSecs[i]
 				break
 	print("Button4")
 	topIngredientPanel.visible=!topIngredientPanel.visible
@@ -205,6 +205,23 @@ func _on_button_4_pressed():
 		$TextureRect2/ItemList2.set_item_disabled(i,!$TextureRect2/ItemList2.is_item_disabled(i))
 	for i in range($TextureRect3/ItemList3.get_item_count()):
 		$TextureRect3/ItemList3.set_item_disabled(i,!$TextureRect3/ItemList3.is_item_disabled(i))
+func _new_day():
+	time1[0]=time1[0]-8
+	if(time1[0]<0):
+		time1[1]=0
+		time1[2]=0
+	time2[0]=time2[0]-8
+	if(time2[0]<0):
+		time2[1]=0
+		time2[2]=0
+	time3[0]=time3[0]-8
+	if(time3[0]<0):
+		time3[1]=0
+		time3[2]=0
+	time4[0]=time4[0]-8
+	if(time4[0]<0):
+		time4[1]=0
+		time4[2]=0
 
 func _countDown1(hour,min,sec):
 	if($/root/Node3D/Camera3D/HUD/FFWD.button_pressed):
@@ -345,17 +362,23 @@ func _on_item_list_2_item_selected(index):
 	print(itemList2Ingredients)
 	botIngredientPanel.set_meta("ItemImageData",defTex)
 	botIngredientPanel.set_meta("SelectedItemName","")
+	itemList2IngredientIndices[index]=botIngredientPanel.get_meta("ItemIndex")
+	set_meta("ItemIndexList",itemList2IngredientIndices)
 
 func _on_item_list_3_item_selected(index):
 	itemList3Ingredients[index]=topIngredientPanel.get_meta("SelectedItemName")
 	$TextureRect3/ItemList3.set_item_icon(index,topIngredientPanel.get_meta("ItemImageData"))
 	print(itemList3Ingredients)
-	botIngredientPanel.set_meta("ItemImageData",defTex)
-	botIngredientPanel.set_meta("SelectedItemName","")
+	topIngredientPanel.set_meta("ItemImageData",defTex)
+	topIngredientPanel.set_meta("SelectedItemName","")
+	itemList3IngredientIndices[index]=topIngredientPanel.get_meta("ItemIndex")
+	set_meta("ItemIndexList",itemList3IngredientIndices)
 
 func _on_item_list_4_item_selected(index):
 	itemList4Ingredients[index]=topIngredientPanel.get_meta("SelectedItemName")
 	$TextureRect4/ItemList4.set_item_icon(index,topIngredientPanel.get_meta("ItemImageData"))
 	print(itemList4Ingredients)
-	botIngredientPanel.set_meta("ItemImageData",defTex)
-	botIngredientPanel.set_meta("SelectedItemName","")
+	topIngredientPanel.set_meta("ItemImageData",defTex)
+	topIngredientPanel.set_meta("SelectedItemName","")
+	itemList4IngredientIndices[index]=topIngredientPanel.get_meta("ItemIndex")
+	set_meta("ItemIndexList",itemList4IngredientIndices)
