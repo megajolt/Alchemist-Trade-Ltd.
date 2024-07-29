@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu6b0ct3jwkmt"]
+[gd_scene load_steps=3 format=3 uid="uid://cu6b0ct3jwkmt"]
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_k8bbq"]
 [ext_resource type="Script" path="res://Scripts/MarketItemThing.gd" id="1_owxwl"]
-[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="2_1gj7c"]
 
 [node name="MarketItemThing" type="Control"]
 custom_minimum_size = Vector2(390, 41)
@@ -17,6 +16,7 @@ script = ExtResource("1_owxwl")
 metadata/IngredientDescription = ""
 metadata/Stock = 10
 metadata/Price = 0
+metadata/PicPath = ""
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -28,7 +28,6 @@ offset_top = -15.0
 offset_right = 35.0
 offset_bottom = 15.0
 grow_vertical = 2
-texture = ExtResource("2_1gj7c")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

@@ -10,7 +10,7 @@ extends Panel
 var recipe_scene = preload("res://Scenes/LibraryItem.tscn")
 
 var recipe_names = ["Mega Box","UltraWire","Exxtra Clean","Sticky Fuel","MiniReactor","Ultra Fertilizer","Poison+","PurePipes","DataCoin","Sundae","Extra Strength Peanuts","Strength Juice","Mobile Tracking Unit","AA Batteries","MegaCoat","Cloak Pouch","1/4 Inch Steel Beam","Salt Water","Large Waterskin (Pre-Filled)","Cube Of Mass"]
-
+var recipe_pics = ["","","","","","","","","","","","","","","","","","","",""]
 var recipe_descriptions=["By combining several different metals to create a box, create an impenetrable container for all kinds of items."
 ,"An alloy of Gold and Platinum, surrounded in a Rubber coating."
 ,"Extra strength cleaning solution used to cull even the worst stains."

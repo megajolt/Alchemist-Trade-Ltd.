@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dks65j107hth8"]
+[gd_scene load_steps=4 format=3 uid="uid://dks65j107hth8"]
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_f2m5h"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="1_x3sq2"]
 [ext_resource type="Script" path="res://Scripts/Ingredients.gd" id="3_dkhdr"]
-[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="4_vbfki"]
 
 [node name="MarketUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
@@ -176,7 +175,6 @@ offset_left = -0.0400002
 offset_top = -0.150005
 offset_right = 0.0399933
 offset_bottom = -0.100006
-texture = ExtResource("4_vbfki")
 
 [node name="Ingredient Description" type="Label" parent="Ingredient Info"]
 layout_mode = 0

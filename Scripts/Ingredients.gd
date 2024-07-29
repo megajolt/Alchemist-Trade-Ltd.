@@ -6,6 +6,7 @@ extends Panel
 
 var ingredient_scene = preload("res://Scenes/MarketItemThing.tscn")
 var ingredient_names = ["Copper","Silver","Sulfur","Chlorine","Platinum","Iron","Gold","Cinnamon","Ruby Dust","Uranium","Oxygen","Water","Hydrogen","Salt","Mercury","Coal","Bone Dust","Bananas","Tires","Styrofoam"]
+var ingredient_pics = ["res://2DAssets/Ingredients/Copper.png","res://2DAssets/Ingredients/Silver.png","res://2DAssets/Ingredients/Sulfur.png","res://2DAssets/Ingredients/Chlorine.png","res://2DAssets/Ingredients/Platinum.png","res://2DAssets/Ingredients/Iron.png","res://2DAssets/Ingredients/Gold.png","res://2DAssets/Ingredients/Cinnamon.png","res://2DAssets/Ingredients/RubyDust.png","res://2DAssets/Ingredients/Uranium.png","res://2DAssets/Ingredients/Oxygen.png","res://2DAssets/Ingredients/Water.png","res://2DAssets/Ingredients/Hydrogen.png","res://2DAssets/Ingredients/Salt.png","res://2DAssets/Ingredients/Mercury.png","res://2DAssets/Ingredients/Coal.png","res://2DAssets/Ingredients/BoneDust.png","res://2DAssets/Ingredients/Bananas.png","res://2DAssets/Ingredients/Tires.png","res://2DAssets/Ingredients/Styrofoam.png"]
 var ingredient_prices=[480, 355, 550, 425, 525, 585, 635, 620, 685, 415, 460, 650, 605, 435, 430, 790, 330, 505, 690, 335]
 var ingredient_descriptions=["Ethically sourced from free range powerlines, spent bullets, and recycled phones."
 ,"For a special occasion, or hunting that suspiciously pale neighbor."
@@ -36,9 +37,10 @@ func _ready():
 		var costLabel=ingredient_instance.get_node("Cost Num")
 		ingredientLabel.text=ingredient_names[i]
 		costLabel.text=str(ingredient_prices[i])
+		ingredient_instance.get_node("TextureRect").texture=load(ingredient_pics[i])
 		ingredient_instance.set_meta("IngredientDescription",ingredient_descriptions[i])
 		ingredient_instance.set_meta("Price",ingredient_prices[i])
-		
+		ingredient_instance.set_meta("PicPath",ingredient_pics[i])
 		vBox.add_child(ingredient_instance)
 
 func _restock():

@@ -6,7 +6,7 @@ extends Control
 @onready var stockList=$"/root/Node3D/Camera3D/StockUi/Ingredients"
 @onready var descriptionNode = $"/root/Node3D/Camera3D/MarketUi/Ingredient Info"
 var changeAmount=0;
-signal item_bought(item_name: String,cost: String,item_description: String)
+signal item_bought(item_name: String,cost: String,item_description: String,item_pic: String)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var ingredients_callable = Callable(stockList, "_on_item_bought")
@@ -27,7 +27,7 @@ func _on_buy_pressed():
 		changeAmount-=int($"Cost Num".text)
 		hudNode.set_meta("ChangeAmount",changeAmount)
 		hudNode.set_meta("MoneyChange",true)
-		item_bought.emit($"Ingredient Title".text,$"Cost Num".text,get_meta("IngredientDescription"))
+		item_bought.emit($"Ingredient Title".text,$"Cost Num".text,get_meta("IngredientDescription"),get_meta("PicPath"))
 
 
 func _on_button_pressed():
@@ -37,4 +37,5 @@ func _on_button_pressed():
 	ingredientName.text=$"Ingredient Title".text
 	ingredientCost.text=$"Cost Num".text
 	ingredientDescription.text=get_meta("IngredientDescription")
+	descriptionNode.get_node("Ingredient Image").texture=load(get_meta("PicPath"))
 	

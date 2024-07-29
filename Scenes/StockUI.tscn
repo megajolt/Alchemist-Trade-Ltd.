@@ -185,6 +185,7 @@ script = ExtResource("3_eye1m")
 metadata/ItemNames = []
 metadata/ItemCosts = []
 metadata/ItemDescriptions = []
+metadata/ItemPics = []
 
 [node name="ItemList" type="ItemList" parent="Ingredients"]
 layout_mode = 1

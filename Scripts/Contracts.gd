@@ -1,5 +1,4 @@
 extends Control
-@onready var toggle = $"Available Contracts"
 @onready var scrollPanel = self
 @onready var vBox = $ScrollContainer/VBoxContainer
 
@@ -8,6 +7,7 @@ var rng = RandomNumberGenerator.new()
 var contract_scene = preload("res://Scenes/contract.tscn")
 var name_list=["Slarbo","Lorafung","Bink","Thara Corpo","Shuni","Pue","Smago","I","Morko","Arbo","Glarry","Bill","Slop Eater","P-der","Nuhm","Moink","Qrork","X-09","Liiple","Kelk"]
 var reward = [7485, 2730, 9120, 5730, 4500, 8130, 7530, 9750, 5475, 4305, 4920, 7125, 9045, 5805, 8220, 6120, 6300, 3390, 3480, 9285]
+var profile_pics=["res://2DAssets/People/Person1.png","res://2DAssets/People/Person2.png","res://2DAssets/People/Person3.png","res://2DAssets/People/Person4.png","res://2DAssets/People/Person5.png","res://2DAssets/People/Person6.png","res://2DAssets/People/Person7.png","res://2DAssets/People/Person8.png","res://2DAssets/People/Person9.png","res://2DAssets/People/Person10.png","res://2DAssets/People/Person11.png","res://2DAssets/People/Person12.png","res://2DAssets/People/Person13.png","res://2DAssets/People/Person14.png","res://2DAssets/People/Person15.png","res://2DAssets/People/Person16.png","res://2DAssets/People/Person17.png","res://2DAssets/People/Person18.png","res://2DAssets/People/Person19.png","res://2DAssets/People/Person20.png"]
 var contract_desc=["I am in need of some Items for disposal. Please provide them."
 ,"Wires. Many Wires. One Wire?"
 ,"Prepping for a job. Need these or else."
@@ -46,6 +46,7 @@ func gen_new_contracts():
 		var nameandface=rng.randi_range(0,19)
 		var descandreward=rng.randi_range(0,19)
 		contract_instance.get_node("Name").text=name_list[nameandface]
+		contract_instance.get_node("TextureRect").texture=load(profile_pics[nameandface])
 		contract_instance.get_node("Reward").text=str(reward[descandreward])
 		contract_instance.get_node("Description").text=contract_desc[descandreward]
 		for j  in contract_items[descandreward]:
