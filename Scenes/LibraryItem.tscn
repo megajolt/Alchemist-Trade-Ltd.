@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1alqxej8cyy2"]
+[gd_scene load_steps=3 format=3 uid="uid://d1alqxej8cyy2"]
 
 [ext_resource type="Script" path="res://Scripts/LibraryItem.gd" id="1_mpsx2"]
-[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="2_6sr1d"]
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="3_xxnh8"]
 
 [node name="LibraryItem" type="Control"]
@@ -19,6 +18,7 @@ metadata/TimeHour = 0
 metadata/TimeMin = 0
 metadata/TimeSec = 0
 metadata/IngredientList = []
+metadata/PicPath = ""
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -30,7 +30,6 @@ offset_top = -15.0
 offset_right = 35.0
 offset_bottom = 15.0
 grow_vertical = 2
-texture = ExtResource("2_6sr1d")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

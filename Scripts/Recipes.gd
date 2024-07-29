@@ -10,7 +10,7 @@ extends Panel
 var recipe_scene = preload("res://Scenes/LibraryItem.tscn")
 
 var recipe_names = ["Mega Box","UltraWire","Exxtra Clean","Sticky Fuel","MiniReactor","Ultra Fertilizer","Poison+","PurePipes","DataCoin","Sundae","Extra Strength Peanuts","Strength Juice","Mobile Tracking Unit","AA Batteries","MegaCoat","Cloak Pouch","1/4 Inch Steel Beam","Salt Water","Large Waterskin (Pre-Filled)","Cube Of Mass"]
-var recipe_pics = ["","","","","","","","","","","","","","","","","","","",""]
+var recipe_pics = ["res://2DAssets/Recipes/MegaBox.png","res://2DAssets/Recipes/UltraWire.png","res://2DAssets/Recipes/ExxtraClean.png","res://2DAssets/Recipes/StickyFuel.png","res://2DAssets/Recipes/MiniReactor.png","res://2DAssets/Recipes/UltraFertilizer.png","res://2DAssets/Recipes/PoisonPlus.png","res://2DAssets/Recipes/PurePipes.png","res://2DAssets/Recipes/DataCoin.png","res://2DAssets/Recipes/Sundae.png","res://2DAssets/Recipes/ExtraStrengthPeanuts.png","res://2DAssets/Recipes/StrengthJuice.png","res://2DAssets/Recipes/MobileTrackUnit.png","res://2DAssets/Recipes/AABat.png","res://2DAssets/Recipes/MegaCoat.png","res://2DAssets/Recipes/CloakPouch.png","res://2DAssets/Recipes/SteelBeam.png","res://2DAssets/Recipes/SaltWater.png","res://2DAssets/Recipes/WaterSkin.png","res://2DAssets/Recipes/CubeMass.png"]
 var recipe_descriptions=["By combining several different metals to create a box, create an impenetrable container for all kinds of items."
 ,"An alloy of Gold and Platinum, surrounded in a Rubber coating."
 ,"Extra strength cleaning solution used to cull even the worst stains."
@@ -53,5 +53,7 @@ func _ready():
 		recipe_instance.set_meta("TimeMin",time_minutes[i])
 		recipe_instance.set_meta("TimeSec",time_seconds[i])
 		recipe_instance.set_meta("IngredientList",recipe_ingredients[i])
+		recipe_instance.set_meta("PicPath",recipe_pics[i])
+		recipe_instance.get_node("TextureRect").texture=load(recipe_pics[i])
 		vBox.add_child(recipe_instance)
 		

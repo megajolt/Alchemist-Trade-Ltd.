@@ -14,6 +14,8 @@ func _on_button_pressed():
 	var recipeDescription=descriptionNode.get_node("Recipe Description")
 	var ingredList=descriptionNode.get_node("ItemList")
 	var ingredInfo = get_meta("IngredientList")
+	var ingredPic = descriptionNode.get_node("Ingredient Image")
+	ingredPic.texture=load(get_meta("PicPath"))
 	recipeTitle.text=$"Recipe Title".text
 	recipeTime.text=str(get_meta("TimeHour"))+":"+str(get_meta("TimeMin"))+":"+str(get_meta("TimeSec"))
 	recipeDescription.text=get_meta("recipeDescription")

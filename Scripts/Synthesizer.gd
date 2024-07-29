@@ -8,21 +8,25 @@ var itemList1Ingredients = ["","","",""]
 var itemList1IngredientIndices=[null,null,null,null]
 var recipe1=""
 var recipe1Desc=""
+var recipe1Pic= ""
 
 var itemList2Ingredients = ["","","",""]
 var itemList2IngredientIndices=[null,null,null,null]
 var recipe2=""
 var recipe2Desc=""
+var recipe2Pic= ""
 
 var itemList3Ingredients = ["","","",""]
 var itemList3IngredientIndices=[null,null,null,null]
 var recipe3=""
 var recipe3Desc=""
+var recipe3Pic= ""
 
 var itemList4Ingredients = ["","","",""]
 var itemList4IngredientIndices=[null,null,null,null]
 var recipe4=""
 var recipe4Desc=""
+var recipe4Pic= ""
 
 var time1=[0,0,0]
 var time2=[0,0,0]
@@ -42,6 +46,8 @@ var defTex = ImageTexture.create_from_image(image)
 @onready var item_costs=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemCosts")
 @onready var item_descriptions=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemDescriptions")
 
+var recipe_names = ["Mega Box","UltraWire","Exxtra Clean","Sticky Fuel","MiniReactor","Ultra Fertilizer","Poison+","PurePipes","DataCoin","Sundae","Extra Strength Peanuts","Strength Juice","Mobile Tracking Unit","AA Batteries","MegaCoat","Cloak Pouch","1/4 Inch Steel Beam","Salt Water","Large Waterskin (Pre-Filled)","Cube Of Mass"]
+var recipe_pics = ["res://2DAssets/Recipes/MegaBox.png","res://2DAssets/Recipes/UltraWire.png","res://2DAssets/Recipes/ExxtraClean.png","res://2DAssets/Recipes/StickyFuel.png","res://2DAssets/Recipes/MiniReactor.png","res://2DAssets/Recipes/UltraFertilizer.png","res://2DAssets/Recipes/PoisonPlus.png","res://2DAssets/Recipes/PurePipes.png","res://2DAssets/Recipes/DataCoin.png","res://2DAssets/Recipes/Sundae.png","res://2DAssets/Recipes/ExtraStrengthPeanuts.png","res://2DAssets/Recipes/StrengthJuice.png","res://2DAssets/Recipes/MobileTrackUnit.png","res://2DAssets/Recipes/AABat.png","res://2DAssets/Recipes/MegaCoat.png","res://2DAssets/Recipes/CloakPouch.png","res://2DAssets/Recipes/SteelBeam.png","res://2DAssets/Recipes/SaltWater.png","res://2DAssets/Recipes/WaterSkin.png","res://2DAssets/Recipes/CubeMass.png"]
 var recipe_descriptions=["By combining several different metals to create a box, create an impenetrable container for all kinds of items."
 ,"An alloy of Gold and Platinum, surrounded in a Rubber coating."
 ,"Extra strength cleaning solution used to cull even the worst stains."
@@ -111,6 +117,7 @@ func _on_button_1_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe1=recipeNames[i]
 				recipe1Desc=recipe_descriptions[i]
+				recipe1Pic=recipe_pics[i]
 				print(get_meta("ItemIndexList"))
 				remove_items()
 				time1[0]=recipeHours[i]
@@ -139,6 +146,7 @@ func _on_button_2_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe2=recipeNames[i]
 				recipe2Desc=recipe_descriptions[i]
+				recipe2Pic=recipe_pics[i]
 				time2[0]=recipeHours[i]
 				time2[1]=recipeMins[i]
 				time2[2]=recipeSecs[i]
@@ -164,6 +172,7 @@ func _on_button_3_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe3=recipeNames[i]
 				recipe3Desc=recipe_descriptions[i]
+				recipe3Pic=recipe_pics[i]
 				time3[0]=recipeHours[i]
 				time3[1]=recipeMins[i]
 				time3[2]=recipeSecs[i]
@@ -190,6 +199,7 @@ func _on_button_4_pressed():
 				print("Recipe"+str(validRecipes[i]))
 				recipe4=recipeNames[i]
 				recipe4Desc=recipe_descriptions[i]
+				recipe4Pic=recipe_pics[i]
 				time4[0]=recipeHours[i]
 				time4[1]=recipeMins[i]
 				time4[2]=recipeSecs[i]
@@ -319,16 +329,16 @@ func _countDown4(hour,min,sec):
 func _add_to_stock(fromSlot):
 	if(fromSlot=="slot1"):
 		print(recipe1)
-		item_bought.emit(recipe1,str(0),recipe1Desc)
+		item_bought.emit(recipe1,str(0),recipe1Desc,recipe1Pic)
 	elif(fromSlot=="slot2"):
 		print(recipe2)
-		item_bought.emit(recipe2,str(0),recipe2Desc)
+		item_bought.emit(recipe2,str(0),recipe2Desc,recipe2Pic)
 	elif(fromSlot=="slot3"):
 		print(recipe3)
-		item_bought.emit(recipe3,str(0),recipe3Desc)
+		item_bought.emit(recipe3,str(0),recipe3Desc,recipe3Pic)
 	elif(fromSlot=="slot4"):
 		print(recipe4)
-		item_bought.emit(recipe4,str(0),recipe4Desc)
+		item_bought.emit(recipe4,str(0),recipe4Desc,recipe4Pic)
 func remove_items():
 	for j in get_meta("ItemIndexList"):
 		$BotIngredientWindow/ItemList.set_item_text(j,str(int($BotIngredientWindow/ItemList.get_item_text(j))-1))
