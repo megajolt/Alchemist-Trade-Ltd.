@@ -34,8 +34,13 @@ func _on_button_pressed():
 	var ingredientName = descriptionNode.get_node("Ingredient Name")
 	var ingredientCost = descriptionNode.get_node("Cost")
 	var ingredientDescription=descriptionNode.get_node("Ingredient Description")
+	var ingredInfo = get_meta("RecipeList")
+	var ingredList = descriptionNode.get_node("ItemList")
 	ingredientName.text=$"Ingredient Title".text
 	ingredientCost.text=$"Cost Num".text
 	ingredientDescription.text=get_meta("IngredientDescription")
 	descriptionNode.get_node("Ingredient Image").texture=load(get_meta("PicPath"))
+	ingredList.clear()
+	for ingredient in ingredInfo:
+		ingredList.add_item(ingredient)
 	

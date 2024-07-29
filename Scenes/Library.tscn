@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://jkv3w0r7cd2u"]
+[gd_scene load_steps=4 format=3 uid="uid://jkv3w0r7cd2u"]
 
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="1_01d82"]
 [ext_resource type="Texture2D" uid="uid://bysloq24bva4c" path="res://2DAssets/Background.png" id="2_d74jr"]
-[ext_resource type="Texture2D" uid="uid://dq8bgs2hkl5e" path="res://2DAssets/PlaceholderIcon.png" id="3_elip1"]
 [ext_resource type="Script" path="res://Scripts/Recipes.gd" id="4_b4x1m"]
 
 [node name="LibraryUi" type="Control"]
@@ -83,7 +82,6 @@ offset_left = -0.0400002
 offset_top = -0.150005
 offset_right = 0.0399933
 offset_bottom = -0.100006
-texture = ExtResource("3_elip1")
 
 [node name="Recipe Description" type="Label" parent="Recipe Info"]
 layout_mode = 0
