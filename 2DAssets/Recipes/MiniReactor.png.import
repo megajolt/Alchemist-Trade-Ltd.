@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsejqq3ouy03l"
-path="res://.godot/imported/MiniReactor.png-638f5ba417188513a0be9241f1ae1e64.ctex"
+path.s3tc="res://.godot/imported/MiniReactor.png-638f5ba417188513a0be9241f1ae1e64.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://2DAssets/Recipes/MiniReactor.png"
-dest_files=["res://.godot/imported/MiniReactor.png-638f5ba417188513a0be9241f1ae1e64.ctex"]
+dest_files=["res://.godot/imported/MiniReactor.png-638f5ba417188513a0be9241f1ae1e64.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

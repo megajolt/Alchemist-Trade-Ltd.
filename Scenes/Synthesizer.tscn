@@ -325,7 +325,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_rlins")
 
 [node name="ItemList" type="ItemList" parent="TopIngredientWindow"]
 layout_mode = 1
@@ -365,7 +364,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_rlins")
 
 [node name="ItemList" type="ItemList" parent="BotIngredientWindow"]
 layout_mode = 1

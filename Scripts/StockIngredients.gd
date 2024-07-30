@@ -31,8 +31,7 @@ func _ready():
 
 func _on_item_bought(item_name: String,cost: String,item_description: String,item_pic: String):
 	var itemIndex=item_names.find(item_name)
-	var image = Image.load_from_file(item_pic)
-	var texture = ImageTexture.create_from_image(image)
+	var texture = load(item_pic)
 	if(itemIndex>=0):
 		print("item exists")
 		$ItemList.set_item_text(itemIndex,str((int($ItemList.get_item_text(itemIndex))+1)))

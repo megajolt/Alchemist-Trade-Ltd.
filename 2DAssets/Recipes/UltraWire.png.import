@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kchbi0kf4ci1"
-path="res://.godot/imported/UltraWire.png-5b4db34414d7085aea342662180b1ebe.ctex"
+path.s3tc="res://.godot/imported/UltraWire.png-5b4db34414d7085aea342662180b1ebe.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://2DAssets/Recipes/UltraWire.png"
-dest_files=["res://.godot/imported/UltraWire.png-5b4db34414d7085aea342662180b1ebe.ctex"]
+dest_files=["res://.godot/imported/UltraWire.png-5b4db34414d7085aea342662180b1ebe.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

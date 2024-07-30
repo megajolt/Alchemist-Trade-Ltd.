@@ -33,8 +33,8 @@ var time2=[0,0,0]
 var time3=[0,0,0]
 var time4=[0,0,0]
 
-var image = Image.load_from_file("res://2DAssets/smallFrame.png")
-var defTex = ImageTexture.create_from_image(image)
+
+var defTex = load("res://2DAssets/smallFrame.png")
 
 @onready var validRecipes = get_meta("ValidRecipes")
 @onready var recipeNames = get_meta("RecipeNames")
@@ -138,15 +138,18 @@ func _on_button_1_pressed():
 	itemList1Ingredients=["","","",""]
 
 func _on_button_2_pressed():
+	print(time2[0],time2[1],time2[2])
 	for j in range($TextureRect2/ItemList2.get_item_count()):
 		$TextureRect2/ItemList2.set_item_icon(j,defTex)
 	if(botIngredientPanel.visible):
 		for i in range(validRecipes.size()):
-			if(validRecipes[i]==itemList1Ingredients):
+			if(validRecipes[i]==itemList2Ingredients):
 				print("Recipe"+str(validRecipes[i]))
 				recipe2=recipeNames[i]
 				recipe2Desc=recipe_descriptions[i]
 				recipe2Pic=recipe_pics[i]
+				print(get_meta("ItemIndexList"))
+				remove_items()
 				time2[0]=recipeHours[i]
 				time2[1]=recipeMins[i]
 				time2[2]=recipeSecs[i]
@@ -168,11 +171,13 @@ func _on_button_3_pressed():
 		$TextureRect3/ItemList3.set_item_icon(j,defTex)
 	if(topIngredientPanel.visible):
 		for i in range(validRecipes.size()):
-			if(validRecipes[i]==itemList1Ingredients):
+			if(validRecipes[i]==itemList3Ingredients):
 				print("Recipe"+str(validRecipes[i]))
 				recipe3=recipeNames[i]
 				recipe3Desc=recipe_descriptions[i]
 				recipe3Pic=recipe_pics[i]
+				print(get_meta("ItemIndexList"))
+				remove_items()
 				time3[0]=recipeHours[i]
 				time3[1]=recipeMins[i]
 				time3[2]=recipeSecs[i]
@@ -195,11 +200,13 @@ func _on_button_4_pressed():
 		$TextureRect4/ItemList4.set_item_icon(j,defTex)
 	if(topIngredientPanel.visible):
 		for i in range(validRecipes.size()):
-			if(validRecipes[i]==itemList1Ingredients):
+			if(validRecipes[i]==itemList4Ingredients):
 				print("Recipe"+str(validRecipes[i]))
 				recipe4=recipeNames[i]
 				recipe4Desc=recipe_descriptions[i]
 				recipe4Pic=recipe_pics[i]
+				print(get_meta("ItemIndexList"))
+				remove_items()
 				time4[0]=recipeHours[i]
 				time4[1]=recipeMins[i]
 				time4[2]=recipeSecs[i]

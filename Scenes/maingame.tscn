@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://epfff3hv30c5"]
+[gd_scene load_steps=16 format=3 uid="uid://epfff3hv30c5"]
 
 [ext_resource type="PackedScene" uid="uid://8fxancoecrt1" path="res://Scenes/HUD.tscn" id="1_5j6tr"]
 [ext_resource type="Script" path="res://Scripts/maingame.gd" id="1_67mp5"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://d2hcug3ndmg2a" path="res://Scenes/Synthesizer.tscn" id="10_uif36"]
 [ext_resource type="PackedScene" uid="uid://jkv3w0r7cd2u" path="res://Scenes/Library.tscn" id="11_fpa8k"]
 [ext_resource type="Theme" uid="uid://cxjmtitrmarst" path="res://2DAssets/UITheme.tres" id="12_jjxu3"]
-[ext_resource type="Texture2D" uid="uid://cfkvf6kpq5mtx" path="res://2DAssets/GameOverTex.png" id="12_oi2uy"]
 [ext_resource type="FontFile" uid="uid://nfb11wfg2gy0" path="res://2DAssets/raster.ttf" id="13_ducvm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wj17d"]
@@ -153,7 +152,6 @@ offset_right = 27.0
 offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("12_oi2uy")
 
 [node name="GameOver" type="Label" parent="Camera3D/Panel"]
 layout_mode = 1

@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5sqcydiu0elr"
-path="res://.godot/imported/Sundae.png-c36e8d9b96bfee3ac247d60008374381.ctex"
+path.s3tc="res://.godot/imported/Sundae.png-c36e8d9b96bfee3ac247d60008374381.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://2DAssets/Recipes/Sundae.png"
-dest_files=["res://.godot/imported/Sundae.png-c36e8d9b96bfee3ac247d60008374381.ctex"]
+dest_files=["res://.godot/imported/Sundae.png-c36e8d9b96bfee3ac247d60008374381.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

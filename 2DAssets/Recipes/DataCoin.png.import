@@ -3,19 +3,20 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck5dofh01ds3r"
-path="res://.godot/imported/DataCoin.png-42da5f694f72fb9624473755e3ca30b9.ctex"
+path.s3tc="res://.godot/imported/DataCoin.png-42da5f694f72fb9624473755e3ca30b9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://2DAssets/Recipes/DataCoin.png"
-dest_files=["res://.godot/imported/DataCoin.png-42da5f694f72fb9624473755e3ca30b9.ctex"]
+dest_files=["res://.godot/imported/DataCoin.png-42da5f694f72fb9624473755e3ca30b9.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
