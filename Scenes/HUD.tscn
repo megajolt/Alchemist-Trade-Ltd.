@@ -178,9 +178,9 @@ grow_vertical = 0
 theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "❚❚"
+text = "||"
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
@@ -197,9 +197,9 @@ grow_vertical = 0
 theme = ExtResource("3_aotyo")
 theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "▶"
+text = ">"
 
 [node name="FFWD" type="Button" parent="."]
 layout_mode = 1
@@ -214,9 +214,9 @@ offset_right = 113.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("3_aotyo")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 35
 toggle_mode = true
-text = "▶▶"
+text = ">>"
 
 [node name="Pass Day" type="Button" parent="."]
 layout_mode = 1
