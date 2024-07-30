@@ -14,6 +14,7 @@ var item_descriptions=[]
 var item_names=[]
 var item_costs=[]
 var item_pics=[]
+var item_recipes=[]
 
 @onready var hudNode=$"/root/Node3D/Camera3D/HUD"
 var changeAmount=0;
@@ -29,7 +30,7 @@ func _ready():
 	synthesizerBottom=$"/root/Node3D/Camera3D/SynthesizerUi/BotIngredientWindow"
 	synthesizerTop=$"/root/Node3D/Camera3D/SynthesizerUi/TopIngredientWindow"
 
-func _on_item_bought(item_name: String,cost: String,item_description: String,item_pic: String):
+func _on_item_bought(item_name: String,cost: String,item_description: String,item_pic: String,item_recipe):
 	var itemIndex=item_names.find(item_name)
 	var texture = load(item_pic)
 	if(itemIndex>=0):
@@ -46,6 +47,9 @@ func _on_item_bought(item_name: String,cost: String,item_description: String,ite
 		set_meta("ItemCosts",item_costs)
 		item_pics.append(item_pic)
 		set_meta("ItemCosts",item_pics)
+		item_recipes.append(item_recipe)
+		set_meta("RecipeList",item_recipes)
+		
 		$ItemList.add_item(str(1),texture)
 		synthesizerTopList.add_item(str(1),texture)
 		synthesizerBottomList.add_item(str(1),texture)
@@ -62,8 +66,10 @@ func _on_item_list_item_selected(index):
 	ingredientDescription.text=item_descriptions[index]
 	ingredientValue.text=item_costs[index]
 	ingredientImage.texture=load(item_pics[index])
-	
-
+	var ingredList = $"/root/Node3D/Camera3D/StockUi/Ingredient Info/ItemList"
+	ingredList.clear()
+	for recipe in item_recipes[index]:
+		ingredList.add_item(recipe)
 
 func _on_sell_pressed():
 	changeAmount+=int(ingredientValue.text)

@@ -17,6 +17,7 @@ metadata/IngredientDescription = ""
 metadata/Stock = 10
 metadata/Price = 0
 metadata/PicPath = ""
+metadata/RecipeList = []
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

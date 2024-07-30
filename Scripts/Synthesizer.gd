@@ -45,6 +45,7 @@ var defTex = load("res://2DAssets/smallFrame.png")
 @onready var item_names=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemNames")
 @onready var item_costs=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemCosts")
 @onready var item_descriptions=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemDescriptions")
+@onready var item_recipes=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("RecipeList")
 
 var recipe_names = ["Mega Box","UltraWire","Exxtra Clean","Sticky Fuel","MiniReactor","Ultra Fertilizer","Poison+","PurePipes","DataCoin","Sundae","Extra Strength Peanuts","Strength Juice","Mobile Tracking Unit","AA Batteries","MegaCoat","Cloak Pouch","1/4 Inch Steel Beam","Salt Water","Large Waterskin (Pre-Filled)","Cube Of Mass"]
 var recipe_pics = ["res://2DAssets/Recipes/MegaBox.png","res://2DAssets/Recipes/UltraWire.png","res://2DAssets/Recipes/ExxtraClean.png","res://2DAssets/Recipes/StickyFuel.png","res://2DAssets/Recipes/MiniReactor.png","res://2DAssets/Recipes/UltraFertilizer.png","res://2DAssets/Recipes/PoisonPlus.png","res://2DAssets/Recipes/PurePipes.png","res://2DAssets/Recipes/DataCoin.png","res://2DAssets/Recipes/Sundae.png","res://2DAssets/Recipes/ExtraStrengthPeanuts.png","res://2DAssets/Recipes/StrengthJuice.png","res://2DAssets/Recipes/MobileTrackUnit.png","res://2DAssets/Recipes/AABat.png","res://2DAssets/Recipes/MegaCoat.png","res://2DAssets/Recipes/CloakPouch.png","res://2DAssets/Recipes/SteelBeam.png","res://2DAssets/Recipes/SaltWater.png","res://2DAssets/Recipes/WaterSkin.png","res://2DAssets/Recipes/CubeMass.png"]
@@ -83,6 +84,7 @@ func _process(delta):
 	item_names=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemNames")
 	item_costs=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemCosts")
 	item_descriptions=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("ItemDescriptions")
+	item_recipes=$"/root/Node3D/Camera3D/StockUi/Ingredients".get_meta("RecipeList")
 	if(time1[0]>0||time1[1]>0||time1[2]>0):
 		$TextureRect1/Timer1.show()
 		$TextureRect1/Timer1.text=str(time1[0])+":"+str(time1[1])+":"+str(time1[2])
@@ -105,7 +107,7 @@ func _process(delta):
 		$TextureRect2/Timer2.hide()
 	if(time3[0]==0&&time3[1]==0&&time3[2]==0):
 		$TextureRect3/Timer3.hide()
-	if(time4[0]==0&&time4[1]==0&&time4[2]==0):
+	if(time4[0]<=0&&time4[1]==0&&time4[2]==0):
 		$TextureRect4/Timer4.hide()
 
 func _on_button_1_pressed():
@@ -223,22 +225,34 @@ func _on_button_4_pressed():
 	for i in range($TextureRect3/ItemList3.get_item_count()):
 		$TextureRect3/ItemList3.set_item_disabled(i,!$TextureRect3/ItemList3.is_item_disabled(i))
 func _new_day():
-	time1[0]=time1[0]-8
+	if(time1[0]>0||time1[1]>0||time1[2]>0):
+		time1[0]=time1[0]-8
 	if(time1[0]<0):
+		time1[0]=0
 		time1[1]=0
 		time1[2]=0
-	time2[0]=time2[0]-8
+		_add_to_stock("slot1")
+	if(time2[0]>0||time2[1]>0||time2[2]>0):
+		time2[0]=time2[0]-8
 	if(time2[0]<0):
+		time2[0]=0
 		time2[1]=0
 		time2[2]=0
-	time3[0]=time3[0]-8
+		_add_to_stock("slot2")
+	if(time3[0]>0||time3[1]>0||time3[2]>0):
+		time3[0]=time3[0]-8
 	if(time3[0]<0):
+		time3[0]=0
 		time3[1]=0
 		time3[2]=0
-	time4[0]=time4[0]-8
+		_add_to_stock("slot3")
+	if(time4[0]>0||time4[1]>0||time4[2]>0):
+		time4[0]=time4[0]-8
 	if(time4[0]<0):
+		time4[0]=0
 		time4[1]=0
 		time4[2]=0
+		_add_to_stock("slot4")
 
 func _countDown1(hour,min,sec):
 	if($/root/Node3D/Camera3D/HUD/FFWD.button_pressed):
@@ -336,16 +350,16 @@ func _countDown4(hour,min,sec):
 func _add_to_stock(fromSlot):
 	if(fromSlot=="slot1"):
 		print(recipe1)
-		item_bought.emit(recipe1,str(0),recipe1Desc,recipe1Pic)
+		item_bought.emit(recipe1,str(0),recipe1Desc,recipe1Pic,[])
 	elif(fromSlot=="slot2"):
 		print(recipe2)
-		item_bought.emit(recipe2,str(0),recipe2Desc,recipe2Pic)
+		item_bought.emit(recipe2,str(0),recipe2Desc,recipe2Pic,[])
 	elif(fromSlot=="slot3"):
 		print(recipe3)
-		item_bought.emit(recipe3,str(0),recipe3Desc,recipe3Pic)
+		item_bought.emit(recipe3,str(0),recipe3Desc,recipe3Pic,[])
 	elif(fromSlot=="slot4"):
 		print(recipe4)
-		item_bought.emit(recipe4,str(0),recipe4Desc,recipe4Pic)
+		item_bought.emit(recipe4,str(0),recipe4Desc,recipe4Pic,[])
 func remove_items():
 	for j in get_meta("ItemIndexList"):
 		$BotIngredientWindow/ItemList.set_item_text(j,str(int($BotIngredientWindow/ItemList.get_item_text(j))-1))
@@ -360,9 +374,11 @@ func remove_items():
 			item_costs.remove_at(j)
 			item_descriptions.remove_at(j)
 			item_names.remove_at(j)
+			item_recipes.remove_at(j)
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemNames",item_names)
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemCosts",item_costs)
 			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("ItemDescriptions",item_descriptions)
+			$"/root/Node3D/Camera3D/StockUi/Ingredients".set_meta("RecipeList",item_descriptions)
 
 func _on_item_list_1_item_selected(index):
 	itemList1Ingredients[index]=botIngredientPanel.get_meta("SelectedItemName")

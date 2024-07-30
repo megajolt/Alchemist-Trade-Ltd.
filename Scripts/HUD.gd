@@ -25,6 +25,8 @@ func _ready():
 	weekPassed.connect(contractGen)
 	var restock=Callable($/root/Node3D/Camera3D/MarketUi/Ingredients,"_restock")
 	dayPassed.connect(restock)
+	var new_day=Callable($/root/Node3D/Camera3D/SynthesizerUi,"_new_day")
+	dayPassed.connect(new_day)
 	contractsRequired = self.get_meta("RequiredContracts")
 	$Money.text = str(money)
 	$Day.text = "Day: "+str(day)
