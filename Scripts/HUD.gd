@@ -15,6 +15,8 @@ var second = Date.second
 var pause = false
 var fast = false
 
+@onready var gameover = $/root/Node3D/Camera3D/Panel
+
 signal dayPassed()
 signal weekPassed()
 # Called when the node enters the scene tree for the first time.
@@ -63,14 +65,15 @@ func _update_date():
 		minute=0
 		second=0
 		if(day%7==0&&day!=0&&fulfilledContracts!=contractsRequired||money<-10000&&day!=0):
-			$GameOver.show()
+			gameover.show()
+			set_process_input(false)
 		elif(day%7==0&&day!=0):
 			contractsRequired+=contractsRequired/2
 			fulfilledContracts=0
 			set_meta("RequiredContracts",contractsRequired)
 			weekPassed.emit()
 		else:
-			$GameOver.hide()
+			gameover.hide()
 	if(calDay>=28):
 		calDay=1
 		calMonth=calMonth+1

@@ -7,17 +7,18 @@
 [node name="LibraryUi" type="Control"]
 custom_minimum_size = Vector2(570, 570)
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -287.0
-offset_top = -287.0
-offset_right = 288.0
-offset_bottom = 288.0
+anchor_left = 0.25
+anchor_top = 0.056
+anchor_right = 0.25
+anchor_bottom = 0.056
+offset_left = 0.5
+offset_top = 0.211998
+offset_right = 575.5
+offset_bottom = 575.212
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
