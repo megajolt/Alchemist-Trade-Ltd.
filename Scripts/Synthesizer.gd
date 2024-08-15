@@ -140,7 +140,6 @@ func _on_button_1_pressed():
 	itemList1Ingredients=["","","",""]
 
 func _on_button_2_pressed():
-	print(time2[0],time2[1],time2[2])
 	for j in range($TextureRect2/ItemList2.get_item_count()):
 		$TextureRect2/ItemList2.set_item_icon(j,defTex)
 	if(botIngredientPanel.visible):
@@ -167,7 +166,7 @@ func _on_button_2_pressed():
 		$TextureRect3/ItemList3.set_item_disabled(i,!$TextureRect3/ItemList3.is_item_disabled(i))
 	for i in range($TextureRect4/ItemList4.get_item_count()):
 		$TextureRect4/ItemList4.set_item_disabled(i,!$TextureRect4/ItemList4.is_item_disabled(i))
-	
+	itemList2Ingredients=["","","",""]
 func _on_button_3_pressed():
 	for j in range($TextureRect3/ItemList3.get_item_count()):
 		$TextureRect3/ItemList3.set_item_icon(j,defTex)
@@ -195,7 +194,7 @@ func _on_button_3_pressed():
 		$TextureRect2/ItemList2.set_item_disabled(i,!$TextureRect2/ItemList2.is_item_disabled(i))
 	for i in range($TextureRect4/ItemList4.get_item_count()):
 		$TextureRect4/ItemList4.set_item_disabled(i,!$TextureRect4/ItemList4.is_item_disabled(i))
-
+	itemList3Ingredients=["","","",""]
 
 func _on_button_4_pressed():
 	for j in range($TextureRect4/ItemList4.get_item_count()):
@@ -224,6 +223,7 @@ func _on_button_4_pressed():
 		$TextureRect2/ItemList2.set_item_disabled(i,!$TextureRect2/ItemList2.is_item_disabled(i))
 	for i in range($TextureRect3/ItemList3.get_item_count()):
 		$TextureRect3/ItemList3.set_item_disabled(i,!$TextureRect3/ItemList3.is_item_disabled(i))
+	itemList4Ingredients=["","","",""]
 func _new_day():
 	if(time1[0]>0||time1[1]>0||time1[2]>0):
 		time1[0]=time1[0]-8
@@ -362,9 +362,11 @@ func _add_to_stock(fromSlot):
 		item_bought.emit(recipe4,str(0),recipe4Desc,recipe4Pic,[])
 func remove_items():
 	for j in get_meta("ItemIndexList"):
-		$BotIngredientWindow/ItemList.set_item_text(j,str(int($BotIngredientWindow/ItemList.get_item_text(j))-1))
-		$TopIngredientWindow/ItemList.set_item_text(j,str(int($TopIngredientWindow/ItemList.get_item_text(j))-1))
-		$/root/Node3D/Camera3D/StockUi/Ingredients/ItemList.set_item_text(j,str(int($/root/Node3D/Camera3D/StockUi/Ingredients/ItemList.get_item_text(j))-1))
+		if(j!=null):
+			print($BotIngredientWindow/ItemList.get_item_text(j))
+			$BotIngredientWindow/ItemList.set_item_text(j,str(int($BotIngredientWindow/ItemList.get_item_text(j))-1))
+			$TopIngredientWindow/ItemList.set_item_text(j,str(int($TopIngredientWindow/ItemList.get_item_text(j))-1))
+			$/root/Node3D/Camera3D/StockUi/Ingredients/ItemList.set_item_text(j,str(int($/root/Node3D/Camera3D/StockUi/Ingredients/ItemList.get_item_text(j))-1))
 	var item_count = $BotIngredientWindow/ItemList.get_item_count()
 	for j in range(item_count - 1, -1, -1):
 		if(int($BotIngredientWindow/ItemList.get_item_text(j))==0):
