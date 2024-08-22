@@ -224,30 +224,31 @@ func _on_button_4_pressed():
 	for i in range($TextureRect3/ItemList3.get_item_count()):
 		$TextureRect3/ItemList3.set_item_disabled(i,!$TextureRect3/ItemList3.is_item_disabled(i))
 	itemList4Ingredients=["","","",""]
-func _new_day():
+func _new_day(thour,tmin,tsec):
+	print(thour,tmin,tsec)
 	if(time1[0]>0||time1[1]>0||time1[2]>0):
-		time1[0]=time1[0]-8
+		time1[0]=time1[0]-(8+(24-thour))
 	if(time1[0]<0):
 		time1[0]=0
 		time1[1]=0
 		time1[2]=0
 		_add_to_stock("slot1")
 	if(time2[0]>0||time2[1]>0||time2[2]>0):
-		time2[0]=time2[0]-8
+		time2[0]=time2[0]-(8+(24-thour))
 	if(time2[0]<0):
 		time2[0]=0
 		time2[1]=0
 		time2[2]=0
 		_add_to_stock("slot2")
 	if(time3[0]>0||time3[1]>0||time3[2]>0):
-		time3[0]=time3[0]-8
+		time3[0]=time3[0]-(8+(24-thour))
 	if(time3[0]<0):
 		time3[0]=0
 		time3[1]=0
 		time3[2]=0
 		_add_to_stock("slot3")
 	if(time4[0]>0||time4[1]>0||time4[2]>0):
-		time4[0]=time4[0]-8
+		time4[0]=time4[0]-(8+(24-thour))
 	if(time4[0]<0):
 		time4[0]=0
 		time4[1]=0

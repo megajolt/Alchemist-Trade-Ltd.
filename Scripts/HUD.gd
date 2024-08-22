@@ -60,7 +60,7 @@ func _update_date():
 	if($"Pass Day".button_pressed||hour==24):
 		$"Pass Day".button_pressed=false
 		$"Pass Day".disabled = true
-		dayPassed.emit()
+		dayPassed.emit(hour,minute,second)
 		day=day+1
 		calDay=calDay+1
 		hour=8
